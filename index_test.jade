@@ -1,0 +1,215 @@
+mixin project_odd(title, year, desc, url, urltitle, imgsrc)
+	div.eight.columns.project.left-col
+		div.four.columns.alpha.push-by-four.img
+			a(href="#{url}"): img(src="#{imgsrc}")
+		div.four.columns.omega.pull-by-four.desc
+			h3 #{title}
+			p
+				span.yr #{year}
+				br
+				| #{desc}
+				br
+				br
+				a(href="#{url}") #{urltitle}
+
+mixin project_even(title, year, desc, url, urltitle, imgsrc)
+	div.eight.columns.project.right-col
+		div.four.columns.alpha.img
+			a(href="#{url}"): img(src="#{imgsrc}")
+		div.four.columns.omega.desc
+			h3 #{title}
+			p
+				span.yr #{year}
+				br
+				| #{desc}
+				br
+				br
+				a(href="#{url}") #{urltitle}
+
+
+
+!!! 5
+// if lt IE 7
+	<html class="ie ie6" lang="en">
+// if IE 7
+	<html class="ie ie7" lang="en">
+// if IE 8
+	<html class="ie ie8" lang="en">
+// [if (gte IE 8)|!(IE)]
+html(lang="en")
+	// <![endif]
+	
+
+	head
+		title Patrik Affentranger - Web Publisher from Berne, Switzerland
+		
+		//- Basic needs
+		meta(charset="utf-8")
+		meta(name="description", content="Patrik Affentranger is a professional Swiss web developer living in Fremantle WA. He speaks fluent HTML and CSS.")
+		meta(name="keywords", content"Web Design Perth, Website Design, Web Design, Web Publisher, Web Development, Website, Design, Publishing, Digital Marketing, Fremantle, Perth, Australia")
+		meta(name="author", content="Patrik Affentranger")
+		meta(name="designer", content="Patrik Affentranger")
+		meta(name="robots", content="index,follow")
+		meta(name="abstract", content="Portfolio of Patrik Affentranger \(Web Publisher)")
+		meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
+		
+		//- Mobile Specific Meta
+		meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1")
+
+		//- CSS
+		link(href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700", rel="stylesheet", type="text/css")
+		link(rel="stylesheet", href="c/css/base.css")
+		link(rel="stylesheet", href="c/css/skeleton.css")
+		link(rel="stylesheet", href="c/css/layout.css")
+		
+		//- Favicons
+		link(rel="shortcut icon", href="i/favicon.ico")
+		link(rel="apple-touch-icon", href="i/apple-touch-icon.png")
+		link(rel="apple-touch-icon", href="i/apple-touch-icon-72x72.png")
+		link(rel="apple-touch-icon", href="i/apple-touch-icon-114x114.png")
+		
+		//- JS
+		// if lt IE 9
+			script(src="http://html5shim.googlecode.com/svn/trunk/html5.js")
+		script(src="j/modernizr.min.js")
+		script(src="j/jquery-1.7.1.min.js")
+		script(src="j/plugins.js")
+
+
+	body#top
+		// if lt IE 7
+			p.chromeframe
+				Your browser is <em>ancient!</em>
+				a(href="http://browsehappy.com/") Upgrade to a different browser
+				|  or 
+				a(href="http://www.google.com/chromeframe/?redirect=true") install Google Chrome Frame
+				to experience this site.
+				
+		//- Primary Page Layout
+		header
+			div.container
+				div.row.remove-bottom
+					div.seven.columns.intro
+						h1 the portfolio of
+							strong Patrik Affentranger
+						p
+							| I am a professional Web Publisher from Switzerland based in Perth, Australia.<br/>Since over 6 years I gather commercial experience &amp; perfect my skills. Creating beautiful websites with the use of modern web technologies is what I love.
+					div.ten.columns.photo.alpha.omega.offset-by-six
+						img(class="scale-with-grid", src="i/patrik_affentranger.jpg", alt="Patrik Affentranger, Perth based Web Publisher from Switzerland", title="Patrik Affentranger, Perth based Web Publisher from Switzerland")
+				nav
+					ul.row.remove-bottom
+						li.four.columns.remove-bottom: a.offset-by-one(href="#about") About
+						li.four.columns.remove-bottom: a.offset-by-one(href="#portfolio") Portfolio
+						li.four.columns.remove-bottom: a.offset-by-one(href="#contact") Contact
+						li.four.columns.remove-bottom: a.offset-by-one(href="#pdf") Resume
+		div#main
+			//- 'THIS GUY' SECTION
+			section#about.clearfix
+				div.container
+					div.title.add-bottom.clearfix
+						div.line <!-- -->
+						div.sixteen.columns.alpha.omega
+							h2.five.columns: span.offset-by-one This guy
+							a(href="#top") top
+					div.one-third.column
+						h3 Profile
+						p
+							| I'm Patrik, a Web Publisher and front-end coder with a qualification as Mediamatician from Berne, Switzerland.<br/>I've been creating websites for over six years now. My trademark is simple, clean, usable design with lots of attention to details.
+						p
+							| I'm a tried and true minimalist with an affinity for all things design and web. I run on alls kind of Indie and electronic music, believe in the power of worn jeans and kicks, and like to think this site supports the revolution.
+					div.one-third.column
+						h3 Stats
+						ul#stats.half-bottom
+							li.nine XHTML /CSS
+								span There's always room for improvement.
+							li.eight Photoshop
+							li.six Javascript / jQuery
+							li.seven Telerik Sitefinity
+							li.five WordPress
+							li.six SEO
+							li.eight Account Management
+						div#scale.clearfix.add-bottom
+							div.ruler.clearfix
+								div
+								div.sml
+								div
+								div.sml.last
+							span.l Rookie
+							span.r Master
+					div.one-third.column
+						h3 Locations &amp; Tools
+						ul.column.alpha.omega.locs
+							li: a(href="http://www.twitter.com/pzimat") Twitter
+							li: a(href="#") LinkedIn
+							li: a(href="#") Xing
+							li: a(href="#") Facebook
+							li: a(href="#") Google+
+							li: a(href="#") Flickr
+							li: a(href="#") Instagram
+							li: a(href="#") Foursquare
+							li: a(href="#") Last.fm
+							li: a(href="#") TheSixtyOne
+						ul.column.alpha.omega.tools
+							li: a(href="#") Macbook
+							li: a(href="#") iPhone
+							li: a(href="#") Sparrow
+							li: a(href="#") Things
+							li: a(href="#") Dropbox
+							li: a(href="#") Cyberduck
+							li: a(href="#") Coda
+							li: a(href="#") Notepad++
+							li: a(href="#") Markdown
+					div.sixteen.columns: p.remove-bottom
+						| I can do a lot of things, I suppose, but what I love to do is design and code websites. This is my passion &ndash; taking a project from the very start in ideas and sketching to the final result of a smart, handcrafted, well-constructed website.
+			//- 'PORTFOLIO' SECTION
+			section#portfolio.clearfix
+				div.container
+					div.title.add-bottom.clearfix
+						div.line <!-- -->
+						div.sixteen.columns.alpha.omega
+							h2.five.columns
+								span.offset-by-one His work
+							a(href="#top") top
+					//- PROJECTS
+					div.row
+						//- Project 1 - Geidi
+						mixin project_odd("Geidi", "2011", "Web Design, HTML, CSS, Graphic Design, JavaScript, Concept, Sitefinity", "http://www.geidi.com", "geidi.com", "i/www.geidi.com.jpg")
+						//- Project 2 - n c ag
+						mixin project_even("n c ag", "2011", "Web Design, HTML, CSS, Graphic Design of V1, JavaScript, Concept, PHP", "http://www.ncag.ch", "ncag.ch", "i/www.ncag.ch.jpg")
+					div.row
+						//- Project 3 - Media Impression
+						mixin project_odd("Media Impression")
+						//- Project 3 - Workfinder
+						mixin project_even("Workfinder")
+			//- 'CONTACT' SECTION
+			section#contact.clearfix
+				div.container
+					div.title.add-bottom.clearfix
+						div.line <!-- -->
+						div.sixteen.columns.alpha.omega
+							h2.five.columns
+								span.offset-by-one Catch him
+							a(href="#top") top
+					div.one-third.column
+						p
+							| He is available for freelance, full time positions, commissions, creative opportunities and collaboration work.<br/><br/>If you have got projects, questions or comments about my portfolio. Bring them on and get in touch using the form on the right.<br/>Usually, he gets back pretty quickly, as he spends a majority of his time in front of a monitor.
+					div.one-third.column
+						| bla
+					div.one-third.column
+						fieldset
+							legend Contact
+							form
+								label(for="name") Name
+								input#name(type="text", name="name")
+								label(for="email") E-Mail
+								input#email(type="email", name="email")
+								label(for="message") Message
+								textarea#message(name="message")
+								button Submit
+		footer
+			div.container
+				div.sixteen.columns
+					p
+						| &copy; 2012 Patrik Affentranger - Web Design Portfolio - Hand crafted
+						a(href="http://validator.w3.org/check?uri=referer", rel="nofollow")  HTML and 
+						a(href="http://jigsaw.w3.org/css-validator/validator?uri=www.r0x.ch&amp;profile=css3&amp;usermedium=all&amp;warning=1", rel="nofollow") CSS
