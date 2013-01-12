@@ -42,6 +42,7 @@
 6. **Thanks**
 
  Included in *portefeuille* are
+
     - [Skeleton](https://github.com/dhgamache/Skeleton) framework 
     - parts of Matt Woodfield's [HelpLess](https://github.com/m6tt/HelpLess)
     - Paul Irish's [Modernizr](https://github.com/Modernizr/Modernizr "")
