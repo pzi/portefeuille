@@ -51,7 +51,8 @@ html(lang="en")
 		meta(name="author", content="Patrik Affentranger")
 		meta(name="designer", content="Patrik Affentranger")
 		meta(name="robots", content="index,follow")
-		meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
+		//- The below meta tag is sent using http headers (.htaccess file) 
+		//- meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
 		
 		//- Mobile Specific Meta
 		meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1")
@@ -118,9 +119,9 @@ html(lang="en")
 					div.one-third.column
 						h3 Profile
 						p.
-							My name is Patrik (yes, just a k), I am a Web Publisher and front-end developer from Berne, Switzerland.<br/>I have been creating websites for over 7 years. Clean, simple and usable design with attention to details is my trade mark.
+							My name is Patrik, I am a Web Publisher and front-end developer from Berne, Switzerland.<br/>I have worked with 30+ clients all over the world, small and large. Clean, simple and usable design with attention to details is my trade mark.
 						p.
-							I'm a tried and true minimalist with an affinity for all things design and web. I run on alls kind of Indie and electronic music, believe in the power of worn jeans and kicks, and like to think this site supports the revolution.
+							I love beautifully crafted designs, for print and web. Fuelled by all kinds of indie and electronic music I can tinker for days. Hence, I like to think that <a href="https://github.com/pzi/portefeuille">portefeuille</a> will help others in creating an online portfolio, too.
 					div.one-third.column
 						h3 Stats
 						ul.stats.half-bottom
@@ -164,7 +165,7 @@ html(lang="en")
 							li: a(href="https://github.com/pzi") GitHub
 							li: a(href="http://stackoverflow.com/users/1166161/pezzi") Stack Overflow
 					div.sixteen.columns: p.remove-bottom.
-						I can do a lot of things, I suppose, but what I love to do is design and code websites. This is my passion &ndash; taking a project from the very start in ideas and sketching to the final result of a smart, handcrafted, well-constructed website.
+						As a jack of all trades, I can do a lot of things, but what makes me truly happy, is working with clients to reach and fulfill their business goals. This is my passion &ndash; taking a project from the very start in ideas and sketching to the final result of a smart, handcrafted, well-constructed website. If you would like to sit together and discuss your needs, please check out <a class="smoothScroll" href='#contact'>how to reach me</a> down below.
 			//- 'PORTFOLIO' SECTION
 			section#portfolio.clearfix
 				div.container
@@ -172,7 +173,7 @@ html(lang="en")
 						div.sixteen.columns.alpha.omega.line
 							h2.five.columns.omega: span
 								i.ico14.ico-hat
-								|  His work
+								|  His work *
 							a.top.smoothScroll(href="#top") top
 					//- PROJECTS
 					div.row
@@ -183,18 +184,29 @@ html(lang="en")
 					div.row
 						//- Project 3 - Media Impression
 						mixin project_odd("Media Impression", "2010", "HTML, CSS, JavaScript, PHP", "http://www.mediaimpression.ch", "mediaimpression.ch", "i/www.mediaimpression.ch.jpg")
-						//- Project 3 - Workfinder
+						//- Project 4 - Workfinder
 						mixin project_even("Workfinder", "2011", "Web Design, HTML, CSS, Graphic Design, JavaScript, Concept, PHP", "http://www.workfinder.ch", "workfinder.ch", "i/www.workfinder.ch.jpg")
 					div.row
-						//- Project 3 - Media Impression
+						//- Project 5 - Mohnhaus
 						mixin project_odd("Mohnhaus", "2010", "Web Design, HTML, CSS, PHP, JavaScript, Graphic Design, Concept", "http://www.mohnhaus.ch", "mohnhaus.ch", "i/www.mohnhaus.ch.jpg")
-						//- Project 3 - Workfinder
+						//- Project 6 - Balkonien Wohnen
 						mixin project_even("Balkonien Wohnen", "2010", "HTML, CSS, JavaScript, PHP", "http://www.balkonien-wohnen.ch", "balkonien-wohnen.ch", "i/www.balkonien-wohnen.ch.jpg")
 					div.row
-						//- Project 3 - Media Impression
+						//- Project 7 - Fondation Robmar
 						mixin project_odd("Fondation Robmar", "2010", "Web Design, HTML, CSS, PHP, JavaScript, Graphic Design, Concept", "http://www.fondation-robmar.ch", "fondation-robmar.ch", "i/www.fondation-robmar.ch.jpg")
-						//- Project 3 - Workfinder
+						//- Project 8 - Advantis
 						mixin project_even("Advantis", "2010", "Web Design, HTML, CSS, PHP, JavaScript, Concept", "http://www.advantis-ic.com", "advantis-ic.com", "i/www.advantis-ic.com.jpg")
+					div.sixteen.columns: p.remove-bottom.
+						* Unfortunately, I cannot display more projects at this time. This is due to the fact that a lot of my past work was for intra- and extranets, which are protected sites and therefore not publicly available. However, I will see what I can do and try to get some screenshots to display.<br>
+						Some of the clients I have worked with/for:<br>
+						&bull; <a href="http://www.ausdrill.com.au" rel="nofollow">Ausdrill</a>
+						&bull; <a href="http://www.swisspost.com" rel="nofollow">Swiss Post</a>
+						&bull; <a href="http://www.moevenpick-hotels.com" rel="nofollow">Moevenpick Hotels &amp; Resorts</a>
+						&bull; <a href="http://www.swiss.com" rel="nofollow">Swiss International Air Lines Ltd.</a>
+						&bull; <a href="http://www.myswitzerland.com" rel="nofollow">Swiss Tourism</a>
+						&bull; <a href="http://www.spar-int.com" rel="nofollow">Spar</a>
+						&bull; <a href="http://www.kuoni.com" rel="nofollow">Kuoni</a>
+						&bull; <a href="http://www.aldi.com" rel="nofollow">Aldi</a>
 			//- 'CONTACT' SECTION
 			section#contact.clearfix
 				div.container
@@ -211,7 +223,7 @@ html(lang="en")
 							If you have got projects, questions, comments about my portfolio or just want to say hello anyway, <a href="mailto:hello__at__patrikaffentranger.me" rel="nofollow">drop me a line</a> or
 							have a look where you can find myself in the cloud.<br>
 							<br>
-							Normally, I am a quick on the answer, unless none of my devices can connect to the internet.
+							Normally, I am quick hitting the reply button, unless none of my devices can connect to the internet.
 					div.one-third.column
 						ul.column.alpha.omega.locs
 							li: a(href="https://www.facebook.com/paffentranger", rel="nofollow")
@@ -249,9 +261,9 @@ html(lang="en")
 						h3 ... doing updates
 						p.
 							As with all things in life, there is a master plan, the one for my portfolio includes (but is not limited to):<br>
-							&bull; more css3 (like, a lot) &bull; more jade &bull; smacss &bull; cms templates &bull; more less/sass &bull; accessibility &bull; more zing!<br>
+							&bull; more css3 (like, a lot) &bull; more jade &bull; smacss &bull; cms templates &bull; more less/sass &bull; accessibility &bull; Add client logo list &bull; more zing!<br>
 							<br>
-							One line of code at the time. Thanks.
+							One line of code at the time.
 
 		footer
 			div.container
@@ -267,6 +279,7 @@ html(lang="en")
 						a(href="http://glyphicons.com/", rel="nofollow") GLYPHICONS
 						|  which are released under the 
 						a(href="http://creativecommons.org/licenses/by/3.0/deed.en", rel="nofollow") CC BY 3.0 license.
-
+		a(href="https://github.com/pzi/portefeuille")
+			img(style="position: absolute; top: -10px; right: -10px; border: 0;", src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png", alt="Fork me on GitHub")
 		script(type="text/javascript", src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js")
 		script(type="text/javascript", src="j/plugins.min.js")
