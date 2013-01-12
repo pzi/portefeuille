@@ -27,26 +27,27 @@
  
  For now, *portefeuille* is provided as is. I haven't had the time to test every little detail in all the browsers/devices. Looking forward to get some feedback.
 
+
 5. **Future of portefeuille**
 
-    - Split page into multiple jade files
-    - Create [mustache](http://mustache.github.com/) template to make it even easier to change content.
-    - Create templates for common CMS
-    - Change structure to follow [SMACCS](http://smacss.com/) approach
-    - SASS port
-    - More accessibility
-    - Refactor code
-    - More zing!
+    * Split page into multiple jade files
+    * Create [mustache](http://mustache.github.com/) template to make it even easier to change content.
+    * Create templates for common CMS
+    * Change structure to follow [SMACCS](http://smacss.com/) approach
+    * SASS port
+    * More accessibility
+    * Refactor code
+    * More zing!
 
 
 6. **Thanks**
 
- Included in *portefeuille* are
-
-    - [Skeleton](https://github.com/dhgamache/Skeleton) framework 
-    - parts of Matt Woodfield's [HelpLess](https://github.com/m6tt/HelpLess)
-    - Paul Irish's [Modernizr](https://github.com/Modernizr/Modernizr "")
-    - Jan Kovařík's [Glyphicons FREE](http://glyphicons.com/)
+ Included in *portefeuille* are:
+ 
+ * [Skeleton](https://github.com/dhgamache/Skeleton) framework 
+ * parts of Matt Woodfield's [HelpLess](https://github.com/m6tt/HelpLess)
+ * Paul Irish's [Modernizr](https://github.com/Modernizr/Modernizr "")
+ * Jan Kovařík's [Glyphicons FREE](http://glyphicons.com/)
 
 
 7. **License**
@@ -63,7 +64,7 @@
 
  **Dependencies:**
 
-    - All parts of Skeleton are free to use and abuse under the open-source MIT license.
-    - HelpLess is released under the MIT license.
-    - Modernizr is released under the MIT license.
-    - Glyphicons FREE are released under the [Creative Commons Attribution 3.0 Unported (CC BY 3.0)](http://creativecommons.org/licenses/by/3.0/deed.en)
+ * All parts of Skeleton are free to use and abuse under the open-source MIT license.
+ * HelpLess is released under the MIT license.
+ * Modernizr is released under the MIT license.
+ * Glyphicons FREE are released under the [Creative Commons Attribution 3.0 Unported (CC BY 3.0)](http://creativecommons.org/licenses/by/3.0/deed.en)
