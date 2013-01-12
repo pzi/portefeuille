@@ -1,0 +1,19 @@
+﻿/* TEAM */
+	Patrik Affentranger
+	Contact: hello [at] patrikaffentranger.me
+	Twitter: @pzimat
+	From:Berne, Switzerland
+
+/* THANKS */
+
+	Michelle Lucking
+	Stefan Schärmeli
+	
+	Media Queries by: Skeleton.css
+		
+
+/* SITE */
+	Last update:09/08/2012
+	Language:English
+	Doctype:HTML5
+	IDE: Sublime Text 2, Notepad++, Cyberduck, Photoshop, LESS

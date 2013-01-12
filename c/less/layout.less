@@ -1,0 +1,491 @@
+@import "config.less";
+
+/*
+* Skeleton V1.1
+* Copyright 2011, Dave Gamache
+* www.getskeleton.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 8/17/2011
+*/
+
+/* Table of Content
+==================================================
+	#Site Styles
+	#Page Styles
+	#Media Queries
+	#Font-Face */
+
+/* #Site Styles
+================================================== */
+::selection, ::-moz-selection, ::-webkit-selection { background:orange; color:@foreground-color; }
+
+h2 span::selection, nav a::selection, ul#stats li::selection,
+h2::-moz-selection, nav a::-moz-selection, ul#stats li::-moz-selection,
+h2::-webkit-selection, nav a::-webkit-selection, ul#stats li::-webkit-selection { background:#888; color:#fff; }
+
+header {
+	background:url("@{image-path}/spikes.gif") repeat-x scroll 0 100% transparent;
+	position:relative;
+	padding-bottom:7px;
+	.container {
+		overflow:hidden;
+		padding-bottom:150px;
+		padding-top:25px;
+	}
+}
+.intro {
+	position:relative;
+	z-index:10;
+	h1 {
+		color:#5f5f5f;
+		font-style:italic;
+		font-size:1.6em;
+		font-family:'Source Sans Pro', sans-serif;
+		strong {
+			color:@foreground-color;
+			display:block;
+			font-style:normal;
+			font-size:2.5em;
+			letter-spacing:-2px;/* -4px */
+			line-height:1em;
+			margin:8px 0 3px;
+			text-transform:uppercase;
+			text-shadow:2px 2px 4px #ccc;
+		}
+	}
+	p {
+		color:#333;
+		font-family: 'Source Sans Pro', sans-serif;
+		font-weight:400;
+		font-size:1.200em;
+		line-height:1.4em;
+		text-shadow:0 1px 0 #ccc;
+	}
+}
+.photo {
+	bottom:0;
+	position:absolute;
+	right:-27px;
+	z-index:0;
+	img {
+		display:block;
+	}
+}
+
+nav { 
+	bottom:0;
+	position:absolute;
+	z-index:10;
+	a, a:link, a:visited {
+		color:#fff;
+	}
+	a {
+		background-color:@theme-base-color;
+		border-bottom:0 none;
+		display:block;
+		/*font-family:Arial, "HelveticaNeue", "Helvetica Neue", Helvetica, sans-serif;*/
+		font-family: 'Source Sans Pro', sans-serif;
+		font-size:1.4em;
+		font-weight:700;
+		letter-spacing:-0.071em;
+		line-height:2.857em;
+		padding-left:23px;
+		text-transform:uppercase;
+		text-decoration:none;
+		-webkit-box-shadow: -1px -1px 1px #aaa, 1px 0px 1px #CCC, 3px 3px 0px rgba(0, 0, 0, 0.5);
+           -moz-box-shadow: -1px -1px 1px #aaa, 1px 0px 1px #CCC, 3px 3px 0px rgba(0, 0, 0, 0.5);
+                box-shadow: -1px -1px 1px #aaa, 1px 0px 1px #CCC, 3px 3px 0px rgba(0, 0, 0, 0.5);
+		&:hover, &:active {
+			text-decoration: none;
+		}
+	}
+}
+
+[class^="ico-"], [class*=" ico-"] {
+	background-image:url("@{image-path}/icons.png");
+	display: inline-block;
+	height: 24px;
+	margin-top: 1px;
+	margin-right:13px;
+	line-height: 24px;
+	vertical-align: text-top;
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	width: 24px;
+}
+.ico14 {
+	height:14px;
+	line-height: 14px;
+	margin-top: 5px;
+	width:14px;	
+}
+.ico14.ico-man		{ background-position: -80px 0; }
+.ico14.ico-hat		{ background-position: -40px -40px; }
+.ico14.ico-comment	{ background-position: 0 -80px; }
+.ico14.ico-doc		{ background-position: -40px 0; }
+
+.ico-man		{ background-position: -40px 0; }
+.ico-hat 	 	{ background-position: 0px -40px; }
+.ico-comment 	{ background-position: -80px -40px; }
+.ico-doc	 	{ background-position: -40px -80px; }
+
+
+
+#about, #portfolio, #contact {
+	background-image:url("@{image-path}/000-noise.png");
+}
+/* greyscale */
+#about 		{ background-color:rgba(150, 150, 150, .1); }
+#portfolio 	{ background-color:rgba(140,140,140, .2); }
+#contact 	{ background-color:rgba(150,150,150, .1); }
+/* coloured
+#about 		{ background-color:rgba(223, 236, 219, .4); }
+#portfolio 	{ background-color:rgba(163,193,191, .3); }
+#contact 	{ background-color:rgba(92,117,137, .3); }
+*/
+section {
+	overflow:hidden;
+	.container {
+		padding-top:2.667em;
+		padding-bottom:5.334em;
+	}
+	.title {
+		position:relative;
+		.line:before {
+			background-color:@theme-base-color;
+			content:"";
+			position:absolute;
+			display:block;
+			height:3px;
+			left:0;
+			top:48%;
+			width:100%;
+			z-index:0;
+		}
+        h2  {
+			color:#fff;
+			font-family: 'Source Sans Pro', sans-serif;
+			font-size:1.2em;
+			font-weight:700;
+			margin:0;
+			text-transform:uppercase;
+			position:relative;
+			z-index:10;
+			&:before {
+				border-color: transparent #342D34;
+				border-style: solid;
+				border-width: 6px 33px 0px 0;
+				bottom: auto;
+				display: block;
+				content: "";
+				position: absolute;
+				top: -6px;
+				left: 0;
+				width: 0;
+			}
+			span {
+				background-color:@theme-base-color;
+				display:block;
+				padding-left:23px;
+				margin-right:20px;
+				&:after {
+					border-color: transparent @theme-base-color;
+					border-style: solid;
+					border-width: 20px 0 20px 20px;
+					bottom: auto;
+					display: block;
+					content: "";
+					position: absolute;
+					top:0;
+					right:0;
+					width:0;
+				}				
+			}
+		}
+		.top {
+			background:url("@{image-path}/icons.png") no-repeat 13px 10px @theme-base-color;
+			line-height:40px;
+			text-indent:-9999px;
+			position:absolute;
+			right:10px;
+			width:40px;
+			z-index:20;
+		}
+	}
+	h3 {
+		color:#4E4F64;
+		font-size:1.4em;
+		font-weight:700;
+		letter-spacing:-1px;
+		text-transform:uppercase;
+	}
+	h3, p, a {
+		text-shadow:0 1px 0 #fff;
+	}
+	&#about {
+		li {
+			a {
+				text-decoration:none;
+				text-transform:uppercase;
+			}
+		}
+	}
+}
+
+
+/* about */
+#about {
+	margin-top:-7px;
+}
+
+.stats {
+	li {
+		#hl.rounded-corners (0px, 6px, 6px, 0px);
+		color:#fff;
+		font-family:@titleFont;
+		font-size:0.933em;
+		line-height:30px;
+		text-transform:uppercase;
+		position:relative;
+		margin-bottom:7px;
+		padding-left:10px;
+		z-index:10;
+		&.nine   { background-color:@foreground-color + #111; width:90%;
+			span { display:none; }
+			&:hover{
+				span {
+					color:#444;
+					display:block;
+					font-family:monospace;
+					font-size:12px;
+					height:67px;
+					line-height:1.5em;
+					padding-right:28px;
+					position:absolute;
+					right:-30px;
+					text-indent:0;
+					text-transform:none;
+					top:-51px;
+					width:160px;
+					z-index:0;
+					&:after {
+						background:url("@{image-path}/icons.png") no-repeat -120px 0 transparent;
+						content:"";
+						display:inline-block;
+						position:absolute;
+						right:0;
+						height:80px;
+						width:40px;
+					}
+				}
+			}
+		}
+		&.eight { background-color:#342d34; /*background-color:@foreground-color + #111 * 3;*/ width:80%; }
+		&.seven { background-color:#4e4f64; /*background-color:@foreground-color + #111 * 5;*/ width:70%; }
+		&.six   { background-color:#5c7589; /*background-color:@foreground-color + #111 * 7;*/ width:60%; }
+		&.five  { background-color:#a3c1bf; /*background-color:@foreground-color + #111 * 9;*/ width:50%; }
+	}
+}
+
+.scale { position:relative;
+	.ruler {
+		border-bottom:1px solid @foreground-color;
+		border-right:1px solid @foreground-color;
+		div {
+			border-left:1px solid @foreground-color;
+			float:left;
+			height:9px;
+			width:24%!important;
+		}
+		.sml { height:6px; margin-top:3px; }
+		.last { width:24%; }
+	}
+	span.l { float:left; }
+	span.r { float:right; }
+}
+
+.locs, .tools { width:50%!important;
+	li {
+		a {
+			text-decoration:none;
+			text-transform:uppercase;
+		}
+	}
+}
+
+/* portfolio */
+#portfolio {
+	.row {
+		border-bottom:2px dashed @foreground-color + #ccc;
+		&:last-child {
+			border-bottom:0 none;
+			margin-bottom:-20px;
+		}
+	}
+	
+	h3 { text-transform:none; }
+	a { text-decoration:none; }
+	.img { padding-top:5px; }
+	img { width:100%; }
+	.project {
+		
+	}
+	.right-col { text-align:right; }
+	.desc {
+		.yr { font-size:1.2em; line-height:1.6em; }
+	}
+	.last .desc { border-bottom:0 none; }
+}
+
+#contact {
+	margin-bottom:-7px;
+	.locs {
+		li { margin-bottom:20px; }
+		img { float:left; margin:0 10px 0 5px; }
+		a { display:block; line-height:24px; }
+		&:first-child {
+			text-align: right;
+			img {float:right;}
+		}
+	}
+}
+
+footer {
+	background:url("@{image-path}/spikes-ud.gif") repeat-x scroll 4px 0 @foreground-color;
+	color:#ddd;
+	font-family:@titleFont;
+	font-size:1.2em;
+	padding:40px 0;
+	text-align: center;
+	a { text-decoration:none;
+		&:link, &:visited { color:#bbb; }
+		&:hover, &:active { color:#fff; }
+	}
+	.footnote {
+		font-size:11px;
+	}
+}
+
+
+/* #Page Styles
+================================================== */
+
+/* #Media Queries
+================================================== */
+
+	/* Smaller than standard 960 (devices and browsers) */
+	@media only screen and (max-width: 959px) {
+		#stats li { padding-left:5px; }
+	}
+
+
+	/* Tablet Portrait size to standard 960 (devices and browsers) */
+	@media only screen and (min-width: 768px) and (max-width: 959px) { 
+		header {
+			.container { padding-bottom: 60px; padding-top: 12px; }
+			.intro p { font-size:1.2em; }
+		}
+		nav li a { padding-left:0!important; text-align:center; }
+		#contact .locs li { margin-bottom:30px; }
+		#contact .locs span { font-size:0.800em; }
+	}
+
+
+	/* All Mobile Sizes (devices and browser) */
+	@media only screen and (max-width: 767px) {
+		.intro h1 strong { font-size:1.8em; }
+		.photo, nav { position:static; }
+		header .container {
+			padding-bottom:0;padding-top:20px;
+			nav li.four.columns {
+				width:50%;
+			}
+		}
+		nav {
+			a {
+				border-top:1px solid #555;
+				border-left:1px solid #555;
+				-webkit-box-shadow:none;
+				   -moz-box-shadow:none;
+				        box-shadow:none;
+			}
+		}
+		section  {
+			.title .top { right:26px; }
+			.title .line:before {
+				display:block;
+				margin-left: -50%;
+				width: 200%;
+			}
+		}
+		
+		#portfolio  {
+			.right-col { text-align:left; }
+			.img { padding-top:8px; }
+			.row { border-bottom:0 none; }
+			.left-col { margin-bottom: 20px; }
+			.left-col, .right-col {
+				border-bottom:2px dashed @foreground-color + #ccc;
+			}
+		}
+	}
+
+
+	/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+	@media only screen and (min-width: 480px) and (max-width: 767px) {
+		.project .columns { width:50%!important; }
+		.row .desc { padding-left:20px; }
+	}
+
+
+	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+	@media only screen and (max-width: 479px) {
+		.intro h1 strong {
+			font-size:1.2em;
+			margin-top: 0;
+		}
+		.intro p {
+			font-size:1.067em;
+			line-height:1.5em;
+		}
+		nav a, nav a:link, nav a:visited {
+			font-size: 0.9em;
+			letter-spacing: 0;
+			padding-left:13px;
+		}
+		[class^="ico-"], [class*=" ico-"] {
+			height: 14px;
+			line-height: 14px;
+			width: 14px;
+		}
+		.ico-man		{ background-position: -80px 0; }
+		.ico-hat		{ background-position: -40px -40px; }
+		.ico-comment	{ background-position: 0 -80px; }
+		.ico-doc		{ background-position: -80px -80px; }
+	}
+
+
+/* #Font-Face
+================================================== */
+/* 	This is the proper syntax for an @font-face file
+		Just create a "fonts" folder at the root,
+		copy your FontName into code below and remove
+		comment brackets */
+
+/*	@font-face {
+	    font-family: 'FontName';
+	    src: url('../fonts/FontName.eot');
+	    src: url('../fonts/FontName.eot?iefix') format('eot'),
+	         url('../fonts/FontName.woff') format('woff'),
+	         url('../fonts/FontName.ttf') format('truetype'),
+	         url('../fonts/FontName.svg#webfontZam02nTh') format('svg');
+	    font-weight: normal;
+	    font-style: normal; }
+*/
+
+
+/* =============================================================================
+   Chrome Frame Prompt
+   ========================================================================== */
+.chromeframe { margin: 0.2em 0; background: #ccc; color: black; padding: 0.2em 0; }
