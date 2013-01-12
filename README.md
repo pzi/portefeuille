@@ -1,6 +1,6 @@
 ## Portefeuille
 
-1. **What is 'portefeuille'?**
+### What is 'portefeuille'?
 
  The portfolio of Patrik Affentranger, a professional Web Publisher from Switzerland based in Perth, Western Australia.
 
@@ -9,38 +9,38 @@
  It's written in **HTML**/[Jade](http://github.com/visionmade/jade) and **CSS**/[LESS](http://github.com/cloudhead/less.js).
 
 
-2. **What does it do?**
+### What does it do?
 
  The idea of *portefeuille* is simple. To provide an easy-to-use website template for web professionals. Anyone can fork my template, swap the text, change links and pictures and voilà, an online portfolio.
 
 
-3. **Compability**
+### Compability
 
  To make *portefeuille* work seamlessly you will need CodeKit (Mac OSX) or LiveReload (Windows). There are also plenty of other tools which can convert Jade or LESS files, I am sure. However, my preferred tool is CodeKit.
  
  If that's cool with you, please clone the repository or download the zip and place it into your wwwroot folder.
 
 
-4. **Collaboration**
+### Collaboration
 
  Please feel free to fork and use *portefeuille*. If there is a problem, please let me know or send me a pull request.
  
  For now, *portefeuille* is provided as is. I haven't had the time to test every little detail in all the browsers/devices. Looking forward to get some feedback.
 
 
-5. **Future of portefeuille**
+### Future of portefeuille
 
- * Split page into multiple jade files
- * Create [mustache](http://mustache.github.com/) template to make it even easier to change content.
- * Create templates for common CMS
- * Change structure to follow [SMACCS](http://smacss.com/) approach
- * SASS port
- * More accessibility
- * Refactor code
- * More zing!
+    * Split page into multiple jade files
+    * Create [mustache](http://mustache.github.com/) template to make it even easier to change content.
+    * Create templates for common CMS
+    * Change structure to follow [SMACCS](http://smacss.com/) approach
+    * SASS port
+    * More accessibility
+    * Refactor code
+    * More zing!
 
 
-6. **Thanks**
+### Thanks
 
  Included in *portefeuille* are:
  
@@ -50,7 +50,7 @@
  * Jan Kovařík's [Glyphicons FREE](http://glyphicons.com/)
 
 
-7. **License**
+### License
 
  *Portefeuille* is released under the MIT license.
 
