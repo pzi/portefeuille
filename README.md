@@ -30,14 +30,14 @@
 
 5. **Future of portefeuille**
 
-    * Split page into multiple jade files
-    * Create [mustache](http://mustache.github.com/) template to make it even easier to change content.
-    * Create templates for common CMS
-    * Change structure to follow [SMACCS](http://smacss.com/) approach
-    * SASS port
-    * More accessibility
-    * Refactor code
-    * More zing!
+ * Split page into multiple jade files
+ * Create [mustache](http://mustache.github.com/) template to make it even easier to change content.
+ * Create templates for common CMS
+ * Change structure to follow [SMACCS](http://smacss.com/) approach
+ * SASS port
+ * More accessibility
+ * Refactor code
+ * More zing!
 
 
 6. **Thanks**
