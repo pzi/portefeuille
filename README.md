@@ -61,7 +61,7 @@
 
  **Dependencies:**
 
-- All parts of Skeleton are free to use and abuse under the open-source MIT license.
-- HelpLess is released under the MIT license.
-- Modernizr is released under the MIT license.
-- Glyphicons FREE are released under the [Creative Commons Attribution 3.0 Unported (CC BY 3.0)](http://creativecommons.org/licenses/by/3.0/deed.en)
+ - All parts of Skeleton are free to use and abuse under the open-source MIT license.
+ - HelpLess is released under the MIT license.
+ - Modernizr is released under the MIT license.
+ - Glyphicons FREE are released under the [Creative Commons Attribution 3.0 Unported (CC BY 3.0)](http://creativecommons.org/licenses/by/3.0/deed.en)
