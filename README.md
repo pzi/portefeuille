@@ -6,7 +6,7 @@
 
  The repository contains my personal online portfolio, which can also be seen at [http://patrikaffentranger.me](http://patrikaffentranger.me).
 
- It's written in **HTML**/[Jade](http://github.com/visionmade/jade) and **CSS**/[LESS](http://github.com/cloudhead/less.js).
+ It's written in **HTML**/[Jade](https://github.com/visionmedia/jade) and **CSS**/[LESS](http://github.com/cloudhead/less.js).
 
 
 ### What does it do?
