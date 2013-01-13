@@ -10,10 +10,11 @@
 	Stefan Schärmeli
 	
 	Media Queries by: Skeleton.css
-		
+	Icons: Glyphicons FREE and TWG Retina Icons
+
 
 /* SITE */
-	Last update:09/08/2012
+	Last update:13/01/2013
 	Language:English
 	Doctype:HTML5
-	IDE: Sublime Text 2, Notepad++, Cyberduck, Photoshop, LESS
+	IDE: Sublime Text 2, Notepad++, Cyberduck, Photoshop, LESS, CodeKit
