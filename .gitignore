@@ -9,4 +9,9 @@ desktop.ini
 # Mac
 .DS_Store
 
+# Compiled source
+style.css
+img
+js
+
 npm-debug.log
