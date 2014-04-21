@@ -8,3 +8,5 @@ desktop.ini
 
 # Mac
 .DS_Store
+
+npm-debug.log
