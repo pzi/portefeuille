@@ -1,3 +1,7 @@
+# Vendor
+node_modules
+bower_components
+
 # Windows
 Thumbs.db
 desktop.ini
