@@ -108,7 +108,7 @@ gulp.task('images', function() {
     .src(paths.images)
     .pipe(plumber())
     .pipe(imagemin())
-    .pipe(gulp.dest('./images'));
+    .pipe(gulp.dest('./img'));
 
   if(development) {
     stream = stream.pipe(livereload());
@@ -122,7 +122,7 @@ gulp.task('svg', function() {
     .src(paths.svg)
     .pipe(plumber())
     .pipe(svgmin())
-    .pipe(gulp.dest('./images'));
+    .pipe(gulp.dest('./img'));
 
   if(development) {
     stream = stream.pipe(livereload());
