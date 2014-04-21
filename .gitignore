@@ -10,6 +10,7 @@ desktop.ini
 .DS_Store
 
 # Compiled source
+*.html
 style.css
 img
 js
