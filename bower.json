@@ -1,0 +1,16 @@
+{
+  "name": "patrikaffentranger.me",
+  "version": "0.0.1",
+  "description": "Portfolio of Patrik Affentranger",
+  "license": "MIT",
+  "homepage": "http://patrikaffentranger.me",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.0"
+  }
+}
