@@ -10,6 +10,7 @@ var gulp        = require('gulp'),
     uglify      = require('gulp-uglify'),
     include     = require('gulp-include'),
     coffee      = require('gulp-coffee'),
+    newer      = require('gulp-newer'),
 
     // open a file or url
     open    = require('open'),
@@ -107,6 +108,7 @@ gulp.task('images', function() {
   var stream = gulp
     .src(paths.images)
     .pipe(plumber())
+    .pipe(newer('./img'))
     .pipe(imagemin())
     .pipe(gulp.dest('./img'));
 
@@ -132,15 +134,14 @@ gulp.task('svg', function() {
 });
 
 gulp.task('watch', function() {
-  gulp.watch(paths.pages, ['compile']);
+  gulp.watch(paths.pages, ['pages']);
   gulp.watch(paths.stylesheets, ['styles']);
   gulp.watch(paths.javascripts, ['scripts']);
   gulp.watch(paths.images, ['images']);
   gulp.watch(paths.svg, ['svg']);
 });
 
-gulp.task('serve', ['default'], function() {
-
+gulp.task('serve', function() {
   // Start Connect server
   var app = connect().use(connect.static('.'));
   http.createServer(app).listen(CONNECT_PORT);
