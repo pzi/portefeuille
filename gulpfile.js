@@ -1,48 +1,42 @@
 // require all the plugins used --------------------------------------------------------------------
 var gulp        = require('gulp'),
-    jade        = require('gulp-jade'),
-    compass     = require('gulp-compass'),
-    plumber     = require('gulp-plumber'),
-    livereload  = require('gulp-livereload'),
-    imagemin    = require('gulp-imagemin'),
-    svgmin      = require('gulp-imagemin'),
-    modernizr   = require('gulp-modernizr'),
-    uglify      = require('gulp-uglify'),
-    include     = require('gulp-include'),
     coffee      = require('gulp-coffee'),
-    newer      = require('gulp-newer'),
-
-    // open a file or url
-    open    = require('open'),
-
-    // http server
-    http = require('http'),
-    connect       = require('connect'),
-
-    // through = stream handling
-    through       = require('through'),
+    compass     = require('gulp-compass'),
+    connect     = require('gulp-connect'),
+    gulpif      = require('gulp-if'),
+    imagemin    = require('gulp-imagemin'),
+    include     = require('gulp-include'),
+    grunt       = require('gulp-grunt'),
+    jade        = require('gulp-jade'),
+    modernizr   = require('gulp-modernizr'),
+    newer       = require('gulp-newer'),
+    plumber     = require('gulp-plumber'),
+    svgmin      = require('gulp-imagemin'),
+    uglify      = require('gulp-uglify'),
 
     // gulp_args = argument parser
-    gulp_args     = require('minimist')(process.argv.slice(2)),
+    gulp_args = require('minimist')(process.argv.slice(2)),
 
-    development = gulp_args.dev,
-    dev = function (stream) {
-      return development ? stream : through();
-    },
-    CONNECT_PORT = 8000,
+    development = gulp_args.dev || false,
     paths;
 
 
-// saving paths ------------------------------------------------------------------------------------
+// all the paths------------------------------------------------------------------------------------
+
+var stylesheets = 'src/stylesheets',
+    javascripts = 'src/javascripts',
+    images      = 'public/img';
+
+
 paths = {
-  pages: './*.jade',
-  styles: 'app/stylesheets/',
-  stylesheet: 'app/stylesheets/style.sass',
-  stylesheets: 'app/stylesheets/**/*.{scss,sass}',
-  javascript: 'app/javascripts/scripts.coffee',
-  javascripts: 'app/javascripts/**/*.{coffee,js}',
-  images: 'app/images/**/*.{png,jpg,gif,jpeg}',
-  svg: 'app/images/**/*.svg'
+  pages: 'src/*.jade',
+  styles: stylesheets,
+  stylesheet:  stylesheets + '/style.{scss,sass}',
+  stylesheets: stylesheets + '/**/*.{scss,sass}',
+  javascript:  javascripts + '/scripts.coffee',
+  javascripts: javascripts + '/**/*.{coffee,js}',
+  images: 'src/images/**/*.{png,jpg,gif,jpeg}',
+  svg: 'src/images/**/*.svg'
 };
 
 
@@ -51,13 +45,9 @@ gulp.task('pages', function() {
   var stream = gulp
     .src(paths.pages)
     .pipe(plumber())
-    .pipe(jade(dev({ pretty: true })))
-    .pipe(gulp.dest('./'));
-
-  if(development) {
-    stream = stream.pipe(livereload());
-  }
-
+    .pipe(gulpif(development, jade({ pretty: true }), jade() ))
+    .pipe(gulp.dest('public'))
+    .pipe(gulpif(development, connect.reload()));
   return stream;
 });
 
@@ -67,15 +57,11 @@ gulp.task('styles', function() {
     .pipe(plumber())
     .pipe(compass({
       sass: paths.styles,
-      css: './',
+      css: 'public',
       style: development ? 'expanded' : 'compressed'
     }))
-    .pipe(gulp.dest('./'));
-
-  if(development) {
-    stream = stream.pipe(livereload());
-  }
-
+    .pipe(gulp.dest('public'))
+    .pipe(gulpif(development, connect.reload()));
   return stream;
 });
 
@@ -85,22 +71,18 @@ gulp.task('scripts', function() {
     .pipe(plumber())
     .pipe(include())
     .pipe(coffee())
-    .pipe(uglify(dev({ compress: false })))
-    .pipe(gulp.dest('./js'));
-
-  if(development) {
-    stream = stream.pipe(livereload());
-  }
-
+    .pipe(gulpif(development, uglify({ preserveComments: 'some' })))
+    .pipe(gulp.dest('public/js'))
+    .pipe(gulpif(development, connect.reload()));
   return stream;
 });
 
 gulp.task('modernizr', function() {
   var stream = gulp
-    .src('./style.css')
-    .pipe(modernizr('modernizr-cust.js'))
-    .pipe(uglify())
-    .pipe(gulp.dest("./"));
+    .src('public/**/*.{js,css}')
+    .pipe(modernizr('modernizr.js'))
+    .pipe(uglify({ preserveComments: 'some' }))
+    .pipe(gulp.dest("public/js"));
   return stream;
 });
 
@@ -108,14 +90,10 @@ gulp.task('images', function() {
   var stream = gulp
     .src(paths.images)
     .pipe(plumber())
-    .pipe(newer('./img'))
+    .pipe(newer(images))
     .pipe(imagemin())
-    .pipe(gulp.dest('./img'));
-
-  if(development) {
-    stream = stream.pipe(livereload());
-  }
-
+    .pipe(gulp.dest(images))
+    .pipe(gulpif(development, connect.reload()));
   return stream;
 });
 
@@ -123,15 +101,36 @@ gulp.task('svg', function() {
   var stream = gulp
     .src(paths.svg)
     .pipe(plumber())
+    .pipe(newer(images))
     .pipe(svgmin())
-    .pipe(gulp.dest('./img'));
-
-  if(development) {
-    stream = stream.pipe(livereload());
-  }
-
+    .pipe(gulp.dest(images))
+    .pipe(gulpif(development, connect.reload()));
   return stream;
 });
+
+gulp.task('copy', function() {
+  gulp.src('src/CNAME')
+    .pipe(gulp.dest('public'));
+
+  gulp.src('src/favicon.ico')
+    .pipe(gulp.dest('public'));
+
+  gulp.src('src/*.txt')
+    .pipe(gulp.dest('public'));
+
+  // temporary include of old style
+  gulp.src('src/style_old.css')
+    .pipe(gulp.dest('public'));
+});
+
+gulp.task('connect', function() {
+  connect.server({
+    root: 'public',
+    livereload: true
+  });
+});
+
+gulp.task('deploy', ['grunt-gh-pages']);
 
 gulp.task('watch', function() {
   gulp.watch(paths.pages, ['pages']);
@@ -141,17 +140,29 @@ gulp.task('watch', function() {
   gulp.watch(paths.svg, ['svg']);
 });
 
-gulp.task('serve', function() {
-  // Start Connect server
-  var app = connect().use(connect.static('.'));
-  http.createServer(app).listen(CONNECT_PORT);
-
-  // Open local server in browser
-  open('http://localhost:' + CONNECT_PORT);
-
-});
 
 // define grouped tasks ----------------------------------------------------------------------------
-gulp.task('default', ['pages', 'styles', 'scripts', 'images', 'svg', 'serve', 'watch']);
+gulp.task('default', [
+  'copy',
+  'pages',
+  'styles',
+  'scripts',
+  'images',
+  'svg',
+  'modernizr',
+  'connect',
+  'watch'
+]);
 
-gulp.task('build', ['pages', 'styles', 'scripts', 'images', 'svg', 'modernizr']);
+gulp.task('build', [
+  'copy',
+  'pages',
+  'styles',
+  'scripts',
+  'images',
+  'svg',
+  'modernizr'
+]);
+
+// Add all Grunt tasks to Gulp
+grunt(gulp);

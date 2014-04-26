@@ -1,6 +1,6 @@
 {
   "name": "patrikaffentranger.me",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Portfolio of Patrik Affentranger",
   "private": true,
   "scripts": {
@@ -16,21 +16,22 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "gulp": "~3.6.0",
-    "gulp-plumber": "~0.6.1",
-    "gulp-jade": "~0.5.0",
-    "minimist": "0.0.8",
-    "through": "~2.3.4",
-    "gulp-compass": "^1.1.8",
-    "connect": "^2.14.4",
-    "gulp-livereload": "^1.3.1",
-    "open": "0.0.5",
-    "gulp-imagemin": "^0.2.0",
-    "gulp-modernizr": "git://github.com/doctyper/gulp-modernizr.git",
-    "gulp-uglify": "^0.2.1",
-    "gulp-svgmin": "^0.4.5",
-    "gulp-include": "^0.2.2",
+    "grunt": "^0.4.4",
     "gulp-coffee": "^1.4.2",
-    "gulp-newer": "~0.3.0"
+    "gulp-compass": "^1.1.8",
+    "gulp-connect": "^2.0.5",
+    "gulp-grunt": "^0.4.1",
+    "gulp-if": "^1.0.0",
+    "gulp-imagemin": "^0.4.0",
+    "gulp-include": "^0.2.2",
+    "gulp-jade": "~0.5.0",
+    "gulp-modernizr": "git://github.com/doctyper/gulp-modernizr.git",
+    "gulp-newer": "~0.3.0",
+    "gulp-plumber": "~0.6.1",
+    "gulp-svgmin": "^0.4.5",
+    "gulp-uglify": "^0.2.1",
+    "gulp": "~3.6.0",
+    "grunt-gh-pages": "^0.9.1",
+    "minimist": "0.0.8"
   }
 }
