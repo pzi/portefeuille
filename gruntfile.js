@@ -1,4 +1,6 @@
-module.exports = function(grunt) {
+"use strict";
+
+module.exports = function (grunt) {
 
   grunt.initConfig({
     'gh-pages': {
