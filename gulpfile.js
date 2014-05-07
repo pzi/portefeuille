@@ -1,31 +1,33 @@
+"use strict";
+
 // require all the plugins used --------------------------------------------------------------------
 var gulp        = require('gulp'),
-    coffee      = require('gulp-coffee'),
-    compass     = require('gulp-compass'),
-    connect     = require('gulp-connect'),
-    gulpif      = require('gulp-if'),
-    imagemin    = require('gulp-imagemin'),
-    include     = require('gulp-include'),
-    grunt       = require('gulp-grunt'),
-    jade        = require('gulp-jade'),
-    modernizr   = require('gulp-modernizr'),
-    newer       = require('gulp-newer'),
-    plumber     = require('gulp-plumber'),
-    svgmin      = require('gulp-imagemin'),
-    uglify      = require('gulp-uglify'),
+  coffee      = require('gulp-coffee'),
+  compass     = require('gulp-compass'),
+  connect     = require('gulp-connect'),
+  gulpif      = require('gulp-if'),
+  imagemin    = require('gulp-imagemin'),
+  include     = require('gulp-include'),
+  grunt       = require('gulp-grunt'),
+  jade        = require('gulp-jade'),
+  modernizr   = require('gulp-modernizr'),
+  newer       = require('gulp-newer'),
+  plumber     = require('gulp-plumber'),
+  svgmin      = require('gulp-imagemin'),
+  uglify      = require('gulp-uglify'),
 
-    // gulp_args = argument parser
-    gulp_args = require('minimist')(process.argv.slice(2)),
+  // gulp_args = argument parser
+  gulp_args = require('minimist')(process.argv.slice(2)),
 
-    development = gulp_args.dev || false,
-    paths;
+  development = gulp_args.dev || false,
+  paths;
 
 
 // all the paths------------------------------------------------------------------------------------
 
 var stylesheets = 'src/stylesheets',
-    javascripts = 'src/javascripts',
-    images      = 'public/img';
+  javascripts = 'src/javascripts',
+  images      = 'public/img';
 
 
 paths = {
@@ -41,17 +43,17 @@ paths = {
 
 
 // define tasks ------------------------------------------------------------------------------------
-gulp.task('pages', function() {
+gulp.task('pages', function () {
   var stream = gulp
     .src(paths.pages)
     .pipe(plumber())
-    .pipe(gulpif(development, jade({ pretty: true }), jade() ))
+    .pipe(gulpif(development, jade({ pretty: true }), jade()))
     .pipe(gulp.dest('public'))
     .pipe(gulpif(development, connect.reload()));
   return stream;
 });
 
-gulp.task('styles', function() {
+gulp.task('styles', function () {
   var stream = gulp
     .src(paths.stylesheet)
     .pipe(plumber())
@@ -65,7 +67,7 @@ gulp.task('styles', function() {
   return stream;
 });
 
-gulp.task('scripts', function() {
+gulp.task('scripts', function () {
   var stream = gulp
     .src(paths.javascript)
     .pipe(plumber())
@@ -77,7 +79,7 @@ gulp.task('scripts', function() {
   return stream;
 });
 
-gulp.task('modernizr', function() {
+gulp.task('modernizr', function () {
   var stream = gulp
     .src('public/**/*.{js,css}')
     .pipe(modernizr('modernizr.js'))
@@ -86,7 +88,7 @@ gulp.task('modernizr', function() {
   return stream;
 });
 
-gulp.task('images', function() {
+gulp.task('images', function () {
   var stream = gulp
     .src(paths.images)
     .pipe(plumber())
@@ -97,7 +99,7 @@ gulp.task('images', function() {
   return stream;
 });
 
-gulp.task('svg', function() {
+gulp.task('svg', function () {
   var stream = gulp
     .src(paths.svg)
     .pipe(plumber())
@@ -108,7 +110,7 @@ gulp.task('svg', function() {
   return stream;
 });
 
-gulp.task('copy', function() {
+gulp.task('copy', function () {
   gulp.src('src/CNAME')
     .pipe(gulp.dest('public'));
 
@@ -123,7 +125,7 @@ gulp.task('copy', function() {
     .pipe(gulp.dest('public'));
 });
 
-gulp.task('connect', function() {
+gulp.task('connect', function () {
   connect.server({
     root: 'public',
     livereload: true
@@ -132,7 +134,7 @@ gulp.task('connect', function() {
 
 gulp.task('deploy', ['grunt-gh-pages']);
 
-gulp.task('watch', function() {
+gulp.task('watch', function () {
   gulp.watch(paths.pages, ['pages']);
   gulp.watch(paths.stylesheets, ['styles']);
   gulp.watch(paths.javascripts, ['scripts']);
