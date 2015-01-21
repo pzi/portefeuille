@@ -6,7 +6,8 @@ module.exports = function (grunt) {
     'gh-pages': {
       public: {
         options: {
-          base: 'public'
+          base: 'public',
+          message: 'Auto-generated commit using grunt-gh-pages'
         },
         src: '**/*'
       }
