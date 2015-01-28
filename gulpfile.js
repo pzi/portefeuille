@@ -60,6 +60,7 @@ gulp.task('styles', function () {
     .pipe(compass({
       sass: paths.styles,
       css: 'public',
+      image: images,
       style: development ? 'expanded' : 'compressed'
     }))
     .pipe(gulp.dest('public'))
