@@ -1,0 +1,37 @@
+{
+  "name": "patrikaffentranger.me",
+  "version": "0.0.2",
+  "description": "Portfolio of Patrik Affentranger",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Patrik Affentranger",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pzi/portefeuille.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pzi/portefeuille/issues"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "gulp-coffee": "^2.2.0",
+    "gulp-compass": "^2.0.3",
+    "gulp-connect": "^2.2.0",
+    "gulp-grunt": "^0.5.2",
+    "gulp-if": "^1.2.5",
+    "gulp-imagemin": "^2.1.0",
+    "gulp-include": "^1.1.0",
+    "gulp-jade": "~0.11.0",
+    "gulp-modernizr": "git://github.com/doctyper/gulp-modernizr.git",
+    "gulp-newer": "~0.5.0",
+    "gulp-plumber": "~0.6.6",
+    "gulp-svgmin": "^1.1.0",
+    "gulp-uglify": "^1.1.0",
+    "gulp": "~3.8.10",
+    "grunt-gh-pages": "^0.9.1",
+    "minimist": "1.1.0"
+  }
+}

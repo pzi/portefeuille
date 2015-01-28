@@ -1,6 +1,17 @@
+# Vendor
+node_modules
+bower_components
+
 # Windows
 Thumbs.db
 desktop.ini
 
 # Mac
 .DS_Store
+
+# Compiled source
+/public
+
+npm-debug.log
+
+.grunt
