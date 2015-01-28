@@ -1,4 +1,4 @@
-﻿/* TEAM */
+/* TEAM */
 	Patrik Affentranger
 	Contact: hello [at] patrikaffentranger.me
 	Twitter: @pzimat
