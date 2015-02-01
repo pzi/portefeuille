@@ -81,7 +81,7 @@ gulp.task('scripts', function () {
     .pipe(plumber())
     .pipe(include())
     .pipe(coffee())
-    .pipe(gulpif(development, uglify({ preserveComments: 'some' })))
+    .pipe(gulpif(development, uglify()))
     .pipe(gulp.dest('public/js'))
     .pipe(gulpif(development, connect.reload()));
   return stream;
@@ -91,7 +91,7 @@ gulp.task('modernizr', function () {
   var stream = gulp
     .src('public/**/*.{js,css}')
     .pipe(modernizr('modernizr.js'))
-    .pipe(uglify({ preserveComments: 'some' }))
+    .pipe(uglify())
     .pipe(gulp.dest("public/js"));
   return stream;
 });
