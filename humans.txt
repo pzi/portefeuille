@@ -2,19 +2,18 @@
 	Patrik Affentranger
 	Contact: hello [at] patrikaffentranger.me
 	Twitter: @pzimat
-	From:Berne, Switzerland
+	From: Berne, Switzerland
 
 /* THANKS */
 
-	Michelle Lucking
 	Stefan Schärmeli
-	
+
 	Media Queries by: Skeleton.css
 	Icons: Glyphicons FREE and TWG Retina Icons
 
 
 /* SITE */
-	Last update:13/01/2013
-	Language:English
-	Doctype:HTML5
-	IDE: Sublime Text 2, Notepad++, Cyberduck, Photoshop, LESS, CodeKit
+	Last update: 28/01/2015
+	Language: English
+	Doctype: HTML5
+	IDE: Sublime Text 3
