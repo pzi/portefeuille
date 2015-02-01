@@ -1,0 +1,30 @@
+mixin project_odd(title, year, desc, url, urltitle, imgsrc)
+  div.eight.columns.project.left-col
+    div.four.columns.alpha.push-by-four.img
+      a(href="#{url}", rel="nofollow"): img(src="#{imgsrc}", alt="Screenshot of #{urltitle}")
+    div.four.columns.omega.pull-by-four
+      .desc
+        h3 #{title}
+        p
+          span.yr #{year}
+          br
+          | #{desc}
+          br
+          br
+          a(href="#{url}", rel="nofollow") &raquo; #{urltitle}
+
+mixin project_even(title, year, desc, url, urltitle, imgsrc)
+  div.eight.columns.project.right-col
+    div.four.columns.alpha.img
+      a(href="#{url}", rel="nofollow"): img(src="#{imgsrc}", alt="Screenshot of #{urltitle}")
+    div.four.columns.omega
+      .desc
+        h3 #{title}
+        p
+          span.yr #{year}
+          br
+          | #{desc}
+          br
+          br
+          a(href="#{url}", rel="nofollow") &raquo; #{urltitle}
+
