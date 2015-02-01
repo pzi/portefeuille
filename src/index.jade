@@ -37,29 +37,30 @@ html(lang="en", class="no-js")
 
     //- Basic needs
     meta(charset="utf-8")
-    meta(name="description", content="Patrik Affentranger, professional web developer living in Australia. He speaks fluent HTML and CSS.")
-    meta(name="keywords", content="Web Design, Web Publisher, Web Development, Website, Design, Publishing, Perth, Fremantle, Australia")
+    meta(name="description", content="Patrik Affentranger, professional Front End Web Developer living in Australia. I am fluent in HTML5, CSS3 and JavaScript.")
+    meta(name="keywords", content="Frontend, Web Publisher, Web Development, Website, Design, Publishing, Perth, Australia")
     meta(name="author", content="Patrik Affentranger")
     meta(name="designer", content="Patrik Affentranger")
     meta(name="robots", content="index,follow")
-    //- The below meta tag is sent using http headers (.htaccess file)
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
 
     //- Mobile Specific Meta
     meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1")
 
     //- CSS
-    link(rel="stylesheet", type="text/css", href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700")
+    link(rel="stylesheet", type="text/css", href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,700")
     link(rel="stylesheet", type="text/css", href="style.css")
 
     //- Favicons
-    link(rel="shortcut icon", href="favicon.ico")
+    link(rel="shortcut icon", href="favicon.ico" type="image/x-icon")
     link(rel="apple-touch-icon", href="img/apple-touch-icon.png")
     link(rel="apple-touch-icon", href="img/apple-touch-icon-72x72.png")
     link(rel="apple-touch-icon", href="img/apple-touch-icon-114x114.png")
 
     //- JS
-    script(type="text/javascript", src="js/modernizr.js")
+    <!--[if lte IE 8]>
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js")
+    <![endif]-->
     script.
       (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
       function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
@@ -68,7 +69,7 @@ html(lang="en", class="no-js")
       r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
       ga('create','UA-37613338-1');ga('send','pageview');
   body#top
-    != "<!--[if lt IE 8]>"
+    != "<!--[if lte IE 8]>"
       p.chromeframe
         | Your browser is <em>ancient!</em>. Please 
         a(href="http://browsehappy.com/") upgrade your browser
@@ -85,7 +86,7 @@ html(lang="en", class="no-js")
             p
               | Professional Web Publisher from Switzerland based in Perth, Australia.
               br
-              |For 7 years I have gathered commercial experience and perfected my skills.
+              | For 7 years I have gathered commercial experience and perfected my skills.
               br
               | My passion is creating beautiful websites using the latest web technologies.
         nav(role="navigation")
@@ -216,45 +217,42 @@ html(lang="en", class="no-js")
               a.top.smoothScroll(href="#top") top
           div.one-third.column
             p.
-              These days I am available for freelance, full time positions and collaboration work.<br>
+              These days I am available for freelance and/or collaboration work.<br>
               <br>
               If you have got projects, questions, comments about my portfolio or just want to say hello anyway, <a href="mailto:hello__at__patrikaffentranger.me" rel="nofollow">drop me a line</a> or
               have a look where you can find myself in the cloud.<br>
               <br>
-              Normally, I am quick hitting the reply button, unless none of my devices can connect to the internet.
+              Normally, I am quick hitting the reply button, unless none of my devices can connect to the interweb.
           div.one-third.column
             ul.column.alpha.omega.locs
-              li: a(href="https://www.facebook.com/paffentranger", rel="nofollow")
-                  img(src="img/social/facebook.png", alt="Facebook icon")
+              li: a(href="https://www.facebook.com/paffentranger", rel="external")
+                  img(src="img/social/facebook.png", alt="Facebook icon", width="24", height="24")
                   span Facebook
               li: a(href="http://www.flickr.com/photos/pzi")
                   img(src="img/social/flickr.png", alt="Flickr icon")
                   span Flickr
-              li: a(href="https://foursquare.com/pzimat", rel="nofollow")
-                  img(src="img/social/4square.png", alt="4square icon")
+              li: a(href="https://foursquare.com/pzimat", rel="external")
+                  img(src="img/social/4square.png", alt="4square icon", width="24", height="24")
                   span 4square
-              li: a(href="http://gplus.to/pzi", rel="nofollow")
-                  img(src="img/social/google_plus.png", alt="Google+ icon")
+              li: a(href="http://gplus.to/pzi", rel="external")
+                  img(src="img/social/google_plus.png", alt="Google+ icon", width="24", height="24")
                   span Google+
-              li: a(href="http://instagram.com/pzi", rel="nofollow")
-                  img(src="img/social/instagram.png", alt="Instagram icon")
+              li: a(href="http://instagram.com/pzi", rel="external")
+                  img(src="img/social/instagram.png", alt="Instagram icon", width="24", height="24")
                   span Instagram
             ul.column.alpha.omega.locs
-              li: a(href="http://www.lastfm.de/user/pezzi", rel="nofollow")
-                  img(src="img/social/last_fm.png", alt="Last.fm icon")
+              li: a(href="http://www.lastfm.de/user/pezzi", rel="external")
+                  img(src="img/social/last_fm.png", alt="Last.fm icon", width="24", height="24")
                   span Last.fm
-              li: a(href="http://au.linkedin.com/in/paffentranger", rel="nofollow")
-                  img(src="img/social/linked_in.png", alt="LinkedIn icon")
+              li: a(href="http://au.linkedin.com/in/paffentranger", rel="external")
+                  img(src="img/social/linked_in.png", alt="LinkedIn icon", width="24", height="24")
                   span LinkedIn
               li: a(href="http://pzi.tumblr.com")
-                  img(src="img/social/tumblr.png", alt="Tumblr icon")
+                  img(src="img/social/tumblr.png", alt="Tumblr icon", width="24", height="24")
                   span Tumblr
-              li: a(href="http://www.twitter.com/pzimat", rel="nofollow")
-                  img(src="img/social/twitter.png", alt="Twitter icon")
+              li: a(href="http://www.twitter.com/pzimat", rel="external")
+                  img(src="img/social/twitter.png", alt="Twitter icon", width="24", height="24")
                   span Twitter
-              li: a(href="http://www.xing.com/profile/Patrik_Affentranger2", rel="nofollow")
-                  img(src="img/social/xing.png", alt="XING icon")
-                  span Xing
           div.one-third.column
             h3 ... doing updates
             p.
@@ -266,16 +264,18 @@ html(lang="en", class="no-js")
       div.container
         div.sixteen.columns
           p.half-bottom
-            | &copy; #{new Date().getFullYear()} Patrik Affentranger - Web Design Portfolio - Hand crafted 
-            a(href="http://validator.w3.org/check?uri=referer", rel="nofollow") HTML 
-            | and 
+            | &copy; #{new Date().getFullYear()} Patrik Affentranger - Web Design Portfolio - Hand crafted
+            a(href="http://validator.w3.org/check?uri=referer", rel="nofollow") HTML
+            | and
             a(href="http://jigsaw.w3.org/css-validator/validator?uri=patrikaffentranger.me&amp;profile=css3&amp;usermedium=all&amp;warning=1", rel="nofollow") CSS
           p.footnote.remove-bottom
             a(href="http://patrikaffentranger.me") patrikaffentranger.me
-            |  uses 
+            |  uses
             a(href="http://glyphicons.com/", rel="nofollow") GLYPHICONS
-            |  which are released under the 
+            |  which are released under the
             a(href="http://creativecommons.org/licenses/by/3.0/deed.en", rel="nofollow") CC BY 3.0 license.
     a.github-ribbon(href="https://github.com/pzi/portefeuille")
       img(src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png", height="149", width="149" alt="Fork me on GitHub")
-    script(type="text/javascript", src="js/scripts.js")
+    script(src="js/modernizr.js")
+    script(src="js/scripts.js")
+

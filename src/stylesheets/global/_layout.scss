@@ -15,7 +15,7 @@
 
 /* #Site Styles
 ================================================== */
-::selection { background: orange; color: $foreground-color; }
+::selection { background: #ccc; color: $foreground-color; }
 
 h2 span::selection, nav a::selection, ul#stats li::selection,
 h2::selection, nav a::selection, ul#stats li::selection {
@@ -28,7 +28,7 @@ header {
   padding-bottom:7px;
   .container {
     overflow:hidden;
-    padding-bottom:80px; /* 150px */
+    padding-bottom:80px;
     padding-top:25px;
   }
 }
@@ -45,11 +45,12 @@ header {
       display:block;
       font-style:normal;
       font-size:2.5em;
-      letter-spacing:-2px;/* -4px */
+      letter-spacing:-2px;
       line-height:1em;
       margin:8px 0 3px;
       text-transform:uppercase;
       text-shadow:2px 2px 4px #ccc;
+      word-spacing: 4px;
     }
   }
   p {
