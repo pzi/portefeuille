@@ -35,6 +35,7 @@ var stylesheets = 'src/stylesheets',
 
 paths = {
   pages: 'src/*.jade',
+  jade: 'src/**/*.jade',
   styles: stylesheets,
   stylesheet:  stylesheets + '/style.{scss,sass}',
   stylesheets: stylesheets + '/**/*.{scss,sass}',
@@ -139,7 +140,7 @@ gulp.task('connect', function () {
 gulp.task('deploy', ['grunt-gh-pages']);
 
 gulp.task('watch', function () {
-  gulp.watch(paths.pages, ['pages']);
+  gulp.watch(paths.jade, ['pages']);
   gulp.watch(paths.stylesheets, ['styles']);
   gulp.watch(paths.javascripts, ['scripts']);
   gulp.watch(paths.images, ['images']);
