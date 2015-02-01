@@ -2,19 +2,20 @@
 
 // require all the plugins used --------------------------------------------------------------------
 var gulp        = require('gulp'),
-  coffee      = require('gulp-coffee'),
-  compass     = require('gulp-compass'),
-  connect     = require('gulp-connect'),
-  gulpif      = require('gulp-if'),
-  imagemin    = require('gulp-imagemin'),
-  include     = require('gulp-include'),
-  grunt       = require('gulp-grunt'),
-  jade        = require('gulp-jade'),
-  modernizr   = require('gulp-modernizr'),
-  newer       = require('gulp-newer'),
-  plumber     = require('gulp-plumber'),
-  svgmin      = require('gulp-imagemin'),
-  uglify      = require('gulp-uglify'),
+  coffee        = require('gulp-coffee'),
+  sass          = require('gulp-sass'),
+  connect       = require('gulp-connect'),
+  gulpif        = require('gulp-if'),
+  imagemin      = require('gulp-imagemin'),
+  include       = require('gulp-include'),
+  grunt         = require('gulp-grunt'),
+  jade          = require('gulp-jade'),
+  modernizr     = require('gulp-modernizr'),
+  newer         = require('gulp-newer'),
+  plumber       = require('gulp-plumber'),
+  svgmin        = require('gulp-imagemin'),
+  uglify        = require('gulp-uglify'),
+  autoprefixer  = require('gulp-autoprefixer'),
 
   // gulp_args = argument parser
   gulp_args = require('minimist')(process.argv.slice(2)),
@@ -57,11 +58,15 @@ gulp.task('styles', function () {
   var stream = gulp
     .src(paths.stylesheet)
     .pipe(plumber())
-    .pipe(compass({
-      sass: paths.styles,
-      css: 'public',
-      image: images,
-      style: development ? 'expanded' : 'compressed'
+    .pipe(sass({
+      indentedSyntax: true,
+      includePaths: paths.styles,
+      imagePath: images,
+      outputStyle: development ? 'expanded' : 'compressed'
+    }))
+    .pipe(autoprefixer({
+      browsers: ['last 2 versions'],
+      cascade: false
     }))
     .pipe(gulp.dest('public'))
     .pipe(gulpif(development, connect.reload()));
