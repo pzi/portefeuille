@@ -1,3 +1,4 @@
+/*jslint node:true*/
 "use strict";
 
 // require all the plugins used --------------------------------------------------------------------
@@ -27,8 +28,9 @@ var gulp        = require('gulp'),
 // all the paths------------------------------------------------------------------------------------
 
 var stylesheets = 'src/stylesheets',
-  javascripts = 'src/javascripts',
-  images      = 'public/img';
+  javascripts   = 'src/javascripts',
+  cssImageSrc   = 'img',
+  images        = 'public/' + cssImageSrc;
 
 
 paths = {
@@ -61,7 +63,7 @@ gulp.task('styles', function () {
     .pipe(sass({
       indentedSyntax: true,
       includePaths: paths.styles,
-      imagePath: images,
+      imagePath: cssImageSrc,
       outputStyle: development ? 'expanded' : 'compressed'
     }))
     .pipe(autoprefixer({
@@ -124,10 +126,6 @@ gulp.task('copy', function () {
     .pipe(gulp.dest('public'));
 
   gulp.src('src/*.txt')
-    .pipe(gulp.dest('public'));
-
-  // temporary include of old style
-  gulp.src('src/style_old.css')
     .pipe(gulp.dest('public'));
 });
 
