@@ -8,7 +8,7 @@
   background-image: image-url($filename)
   @if $inline
     background-image: inline-image($filename)
-  +background-size(image-width($filename)/2 image-height($filename)/2)
+  background-size: (image-width($filename)/2) (image-height($filename)/2)
 
 // hide something from view but not from screenreaders
 =visuallyhidden

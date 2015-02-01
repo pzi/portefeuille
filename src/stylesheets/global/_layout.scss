@@ -15,11 +15,12 @@
 
 /* #Site Styles
 ================================================== */
-::selection, ::-moz-selection, ::-webkit-selection { background: orange; color: $foreground-color; }
+::selection { background: orange; color: $foreground-color; }
 
 h2 span::selection, nav a::selection, ul#stats li::selection,
-h2::-moz-selection, nav a::-moz-selection, ul#stats li::-moz-selection,
-h2::-webkit-selection, nav a::-webkit-selection, ul#stats li::-webkit-selection { background:#888; color:#fff; }
+h2::selection, nav a::selection, ul#stats li::selection {
+  background:#888; color:#fff;
+}
 
 header {
   background:image-url("spikes.gif") repeat-x scroll 0 100% transparent;
@@ -90,9 +91,7 @@ nav {
     padding-left:23px;
     text-transform:uppercase;
     text-decoration:none;
-    -webkit-box-shadow: -1px -1px 1px #aaa, 1px 0px 1px #CCC, 3px 3px 0px rgba(0, 0, 0, 0.5);
-           -moz-box-shadow: -1px -1px 1px #aaa, 1px 0px 1px #CCC, 3px 3px 0px rgba(0, 0, 0, 0.5);
-                box-shadow: -1px -1px 1px #aaa, 1px 0px 1px #CCC, 3px 3px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: -1px -1px 1px #aaa, 1px 0px 1px #CCC, 3px 3px 0px rgba(0, 0, 0, 0.5);
     &:hover, &:active {
       text-decoration: none;
     }
@@ -238,7 +237,7 @@ section {
 
 .stats {
   li {
-    @include border-radius(0 6px 6px 0);
+    border-radius: 0 6px 6px 0;
     color:#fff;
     font-family:$heading-font-family;
     font-size:0.933em;
@@ -416,7 +415,7 @@ footer {
       a {
         border-top:1px solid #555;
         border-left:1px solid #555;
-        @include box-shadow(none);
+        box-shadow: none;
       }
     }
     section  {
