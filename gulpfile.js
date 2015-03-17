@@ -18,6 +18,7 @@ var gulp        = require('gulp'),
   svgmin        = require('gulp-imagemin'),
   uglify        = require('gulp-uglify'),
   autoprefixer  = require('gulp-autoprefixer'),
+  sitemap       = require('gulp-sitemap'),
   path          = require('path'),
   fs            = require('fs'),
 
@@ -126,6 +127,16 @@ gulp.task('svg', function () {
   return stream;
 });
 
+gulp.task('sitemap', function () {
+  var stream = gulp
+    .src('public/**/*.html')
+    .pipe(plumber())
+    .pipe(sitemap({
+      siteUrl: 'http://portfolio.patrikaffentranger.me'
+    }))
+    .pipe(gulp.dest('public'));
+});
+
 gulp.task('copy', function () {
   gulp.src('src/CNAME')
     .pipe(gulp.dest('public'));
@@ -160,6 +171,7 @@ gulp.task('watch', function () {
 gulp.task('default', [
   'copy',
   'pages',
+  'sitemap',
   'styles',
   'scripts',
   'images',
