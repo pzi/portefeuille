@@ -138,9 +138,9 @@ gulp.task('svg', function () {
   return stream;
 });
 
-gulp.task('sitemap', function () {
+gulp.task('sitemap', ['pages'], function () {
   var stream = gulp
-    .src('public/**/*.html')
+    .src('public/*.html')
     .pipe(plumber())
     .pipe(sitemap({
       siteUrl: 'http://portfolio.patrikaffentranger.me'
@@ -148,7 +148,7 @@ gulp.task('sitemap', function () {
     .pipe(gulp.dest('public'));
 });
 
-gulp.task('copy', function () {
+gulp.task('copy', ['sitemap'], function () {
   gulp.src('src/CNAME')
     .pipe(gulp.dest('public'));
 
@@ -183,26 +183,27 @@ gulp.task('watch', function () {
 
 // define grouped tasks ----------------------------------------------------------------------------
 gulp.task('default', [
-  'copy',
   'pages',
-  'sitemap',
   'styles',
   'scripts',
   'images',
   'svg',
   'modernizr',
+  'sitemap',
+  'copy',
   'connect',
   'watch'
 ]);
 
 gulp.task('build', [
-  'copy',
   'pages',
   'styles',
   'scripts',
   'images',
   'svg',
-  'modernizr'
+  'modernizr',
+  'sitemap',
+  'copy'
 ]);
 
 // Add all Grunt tasks to Gulp
