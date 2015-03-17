@@ -1,0 +1,65 @@
+#portfolio
+  .row
+    border-top: 2px dashed $foreground-color + #ccc
+    padding-top: 20px
+  .title + .row
+    padding-top: 0
+    border-top: 0 none
+
+  h3
+    text-transform: none
+
+  a
+    text-decoration: none
+
+  .img
+    padding-top: 5px
+
+  img
+    width: 100%
+
+  .right-col
+    text-align: right
+  .desc
+    .yr
+      font-size: 1.2em
+      line-height: 1.6em
+
+  .last .desc
+    border-bottom: 0 none
+
+.clients
+  ul
+    list-style-position: inside
+    list-style-type: disc
+    overflow: hidden
+    color: #444
+    margin: 0
+
+  li
+    float: left
+    line-height: 1.5
+    margin: 0 25px 0 0
+
+
+@media only screen and (max-width: 767px)
+  #portfolio
+    .right-col
+      text-align: left
+
+    .img
+      padding-top: 8px
+
+    .row
+      border-top: 0 none
+      padding-top: 0
+      margin-bottom: 0
+
+    .left-col,
+    .right-col
+      border-top: 2px dashed $foreground-color + #ccc
+      padding-top: 20px
+
+    .title + .row .left-col
+      border-top: 0 none
+      padding-top: 0

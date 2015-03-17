@@ -315,30 +315,6 @@ section {
   }
 }
 
-/* portfolio */
-#portfolio {
-  .row {
-    border-bottom:2px dashed $foreground-color + #ccc;
-    &:last-child {
-      border-bottom:0 none;
-      margin-bottom:-20px;
-    }
-  }
-
-  h3 { text-transform:none; }
-  a { text-decoration:none; }
-  .img { padding-top:5px; }
-  img { width:100%; }
-  .project {
-
-  }
-  .right-col { text-align:right; }
-  .desc {
-    .yr { font-size:1.2em; line-height:1.6em; }
-  }
-  .last .desc { border-bottom:0 none; }
-}
-
 #contact {
   margin-bottom:-7px;
   .locs {
@@ -429,16 +405,6 @@ footer {
         display:block;
         margin-left: -50%;
         width: 200%;
-      }
-    }
-
-    #portfolio  {
-      .right-col { text-align:left; }
-      .img { padding-top:8px; }
-      .row { border-bottom:0 none; }
-      .left-col { margin-bottom: 20px; }
-      .left-col, .right-col {
-        border-bottom:2px dashed $foreground-color + #ccc;
       }
     }
   }
