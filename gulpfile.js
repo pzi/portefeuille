@@ -73,6 +73,7 @@ gulp.task('styles', function () {
       indentedSyntax: true,
       includePaths: paths.styles,
       imagePath: cssImageSrc,
+      sourceMap: true,
       outputStyle: development ? 'expanded' : 'compressed'
     }))
     .pipe(autoprefixer({
@@ -99,7 +100,17 @@ gulp.task('scripts', function () {
 gulp.task('modernizr', function () {
   var stream = gulp
     .src('public/**/*.{js,css}')
-    .pipe(modernizr('modernizr.js'))
+    .pipe(modernizr({
+      "cache": true,
+      "dest": "public/js/modernizr.js",
+      "uglify": true,
+      "options": [
+        "setClasses",
+        "addTest",
+        "testProp",
+        "fnBind"
+      ],
+    }))
     .pipe(uglify())
     .pipe(gulp.dest("public/js"));
   return stream;
