@@ -157,6 +157,9 @@ gulp.task('copy', function () {
 
   gulp.src('src/*.txt')
     .pipe(gulp.dest('public'));
+
+  gulp.src('src/google*.html')
+    .pipe(gulp.dest('public'));
 });
 
 gulp.task('connect', function () {
