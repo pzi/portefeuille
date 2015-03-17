@@ -1,7 +1,7 @@
 include ./layouts/_mixins.jade
 
 doctype
-html(lang="en", class="no-js")
+html(lang='en', class='no-js')
   head
     include ./layouts/_head.jade
 
@@ -9,14 +9,14 @@ html(lang="en", class="no-js")
     <!--[if lte IE 8]>
     p.chromeframe
       | Your browser is <em>ancient!</em>. Please 
-      a(href="http://browsehappy.com/") upgrade your browser
+      a(href='http://browsehappy.com/') upgrade your browser
       |  to improve your experience.
     <![endif]-->
 
-    header
+    header(role='banner')
       include ./layouts/_header.jade
 
-    main#main(role="main")
+    main#main(role='main')
       //- 'THIS GUY' SECTION
       include ./layouts/_about.jade
 
