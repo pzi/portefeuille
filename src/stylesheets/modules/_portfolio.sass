@@ -1,7 +1,12 @@
 #portfolio
+  @extend %noise-bg
+  background-color: rgba(140,140,140, .2)
+  // coloured: background-color: rgba(163,193,191, .3);
+
   .row
     border-top: 2px dashed $foreground-color + #ccc
     padding-top: 20px
+
   .title + .row
     padding-top: 0
     border-top: 0 none
@@ -20,10 +25,10 @@
 
   .right-col
     text-align: right
-  .desc
-    .yr
-      font-size: 1.2em
-      line-height: 1.6em
+
+  .desc .yr
+    font-size: 1.2em
+    line-height: 1.6em
 
   .last .desc
     border-bottom: 0 none
@@ -63,3 +68,11 @@
     .title + .row .left-col
       border-top: 0 none
       padding-top: 0
+
+
+@media only screen and (min-width: 480px) and (max-width: 767px)
+  .project .columns
+    width: 50% !important
+
+  .row .desc
+    padding-left: 20px

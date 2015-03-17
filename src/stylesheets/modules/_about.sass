@@ -1,0 +1,101 @@
+.locs, .tools
+  width: 50%
+
+  li a
+    text-decoration: none
+    text-transform: uppercase
+
+#about
+  @extend %noise-bg
+  background-color:rgba(150, 150, 150, .1)
+  // coloured: background-color:rgba(223, 236, 219, .4)
+  margin-top: -7px
+
+.stats
+  li
+    border-radius: 0 6px 6px 0
+    color: #fff
+    font-family: $heading-font-family
+    font-size: 0.933em
+    line-height: 30px
+    text-transform: uppercase
+    position: relative
+    margin-bottom: 7px
+    padding-left: 10px
+    z-index: 10
+
+    &.nine
+      background-color: $foreground-color + #111
+      width: 90%
+      span
+        color: #444
+        display: none
+        font-family: monospace
+        font-size: 12px
+        height: 67px
+        line-height: 1.5em
+        padding-right: 28px
+        position: absolute
+        right: -30px
+        text-indent: 0
+        text-transform: none
+        top: -51px
+        width: 160px
+        z-index: 0
+      &:hover span
+        display: block
+        &:after
+          background: transparent image-url("icons.png") no-repeat -120px 0
+          content: ""
+          display: inline-block
+          position: absolute
+          right: 0
+          height: 80px
+          width: 40px
+
+    &.eight
+      background-color: #342d34 /*background-color: $foreground-color + #111 * 3*/
+      width: 80%
+
+    &.seven
+      background-color: #4e4f64 /*background-color: $foreground-color + #111 * 5*/
+      width: 70%
+
+    &.six
+      background-color: #5c7589 /*background-color: $foreground-color + #111 * 7*/
+      width: 60%
+
+    &.five
+      background-color: #a3c1bf /*background-color: $foreground-color + #111 * 9*/
+      width: 50%
+
+.scale
+  position: relative
+
+  .ruler
+    border-bottom: 1px solid $foreground-color
+    border-right: 1px solid $foreground-color
+
+    div
+      border-left: 1px solid $foreground-color
+      float: left
+      height: 9px
+      width: 24%!important
+
+    .sml
+      height: 6px
+      margin-top: 3px
+
+    .last
+      width: 24%
+
+  span.l
+    float: left
+
+  span.r
+    float: right
+
+
+@media only screen and (max-width: 959px)
+  #stats li
+    padding-left: 5px

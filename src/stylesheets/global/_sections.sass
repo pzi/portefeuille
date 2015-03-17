@@ -1,0 +1,88 @@
+section
+  overflow: hidden
+
+  .container
+    padding-top: 2.667em
+    padding-bottom: 5.334em
+
+  .title
+    position: relative
+
+    .line:before
+      background-color: $theme-base-color
+      content: ""
+      position: absolute
+      display: block
+      height: 3px
+      left: 0
+      top: 48%
+      width: 100%
+      z-index: 0
+
+    h2
+      color: #fff
+      font-family: 'Source Sans Pro', sans-serif
+      font-size: 1.2em
+      font-weight: 700
+      margin: 0
+      text-transform: uppercase
+      position: relative
+      z-index: 10
+      &:before
+        border-color: transparent #342D34
+        border-style: solid
+        border-width: 6px 33px 0px 0
+        bottom: auto
+        display: block
+        content: ""
+        position: absolute
+        top: -6px
+        left: 0
+        width: 0
+
+      span
+        background-color: $theme-base-color
+        display: block
+        padding-left: 23px
+        margin-right: 20px
+        &:after
+          border-color: transparent $theme-base-color
+          border-style: solid
+          border-width: 20px 0 20px 20px
+          bottom: auto
+          display: block
+          content: ""
+          position: absolute
+          top: 0
+          right: 0
+          width: 0
+
+    .top
+      background: image-url("icons.png") no-repeat 13px 10px $theme-base-color
+      line-height: 40px
+      text-indent: -9999px
+      position: absolute
+      right: 10px
+      width: 40px
+      z-index: 20
+
+  h3
+    color: #4E4F64
+    font-size: 1.4em
+    font-weight: 700
+    letter-spacing: -1px
+    text-transform: uppercase
+
+  h3, p, a
+    text-shadow: 0 1px 0 #fff
+
+
+@media only screen and (max-width: 767px)
+  section .title
+    .top
+      right: 26px
+
+    .line:before
+      display: block
+      margin-left: -50%
+      width: 200%

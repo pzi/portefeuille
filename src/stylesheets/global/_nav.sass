@@ -1,0 +1,49 @@
+nav
+  bottom: 0
+  position: absolute
+  z-index: 10
+  h2
+    @extend %screenreader
+
+  a, a:link, a:visited
+    color: #fff
+
+  a
+    background-color: $theme-base-color
+    border-bottom: 0 none
+    display: block
+    font-family: 'Source Sans Pro', sans-serif
+    font-size: 1.4em
+    font-weight: 700
+    letter-spacing: -0.071em
+    line-height: 2.857em
+    padding-left: 23px
+    text-transform: uppercase
+    text-decoration: none
+    box-shadow: -1px -1px 1px #aaa, 1px 0px 1px #CCC, 3px 3px 0px rgba(0, 0, 0, 0.5)
+    &:hover, &:active
+      text-decoration: none
+      background-color: lighten($theme-base-color, 13%)
+
+
+@media only screen and (min-width: 768px) and (max-width: 959px)
+  nav li a
+    padding-left: 0 !important
+    text-align: center
+
+
+@media only screen and (max-width: 767px)
+  nav
+    position: static
+    a
+      border-left: 1px solid #555
+      border-top: 1px solid #555
+      box-shadow: none
+
+
+@media only screen and (max-width: 479px)
+  nav a,
+    &, &:link, &:visited
+      font-size: 0.9em
+      letter-spacing: 0
+      padding-left: 13px

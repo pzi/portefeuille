@@ -1,0 +1,87 @@
+header
+  background: image-url("spikes.gif") repeat-x scroll 0 100% transparent
+  position: relative
+  padding-bottom: 7px
+
+  .container
+    overflow: hidden
+    padding-bottom: 80px
+    padding-top: 25px
+
+.intro
+  position: relative
+  z-index: 10
+
+  h1
+    color: #5f5f5f
+    font-style: italic
+    font-size: 1.6em
+    font-family: 'Source Sans Pro', sans-serif
+    text-transform: lowercase
+
+    strong
+      color: $foreground-color
+      display: block
+      font-style: normal
+      font-size: 2.5em
+      letter-spacing: -2px
+      line-height: 1em
+      margin: 0px 0 3px
+      text-transform: uppercase
+      text-shadow: 2px 2px 4px #ccc
+      word-spacing:  4px
+
+  p
+    color: #333
+    font-family: 'Source Sans Pro', sans-serif
+    font-weight: 400
+    font-size: 1.200em
+    line-height: 1.4em
+    text-shadow: 0 1px 0 #eee
+
+.photo
+  bottom: 0
+  position: absolute
+  right: -27px
+  z-index: 0
+
+  img
+    display: block
+
+
+@media only screen and (min-width: 768px) and (max-width: 959px)
+  header
+    .container
+      padding-bottom: 60px
+      padding-top: 12px
+
+      .eleven.columns
+        width: 750px
+
+    .intro p
+      font-size: 1.2em
+
+
+@media only screen and (max-width: 767px)
+  .intro h1 strong
+    font-size: 1.8em
+
+  .photo
+    position: static
+
+  header .container
+    padding-bottom: 0
+    padding-top: 20px
+
+    nav li.four.columns
+      width: 50%
+
+
+@media only screen and (max-width: 479px)
+  .intro
+    h1 strong
+      font-size: 1.2em
+
+    p
+      font-size: 1.067em
+      line-height: 1.5em
