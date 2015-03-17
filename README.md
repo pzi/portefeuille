@@ -6,7 +6,7 @@
 
  The repository contains my personal online portfolio, which can also be seen at [http://portfolio.patrikaffentranger.me](http://portfolio.patrikaffentranger.me).
 
- It's written in [Jade](https://github.com/visionmedia/jade) and [Sass](http://sass-lang.com).
+ It's written in [Jade](http://jade-lang.com) and [Sass](http://sass-lang.com).
 
 
 ### What does it do?
@@ -41,9 +41,8 @@
  Included in *portefeuille* are:
 
  * [Skeleton](https://github.com/dhgamache/Skeleton) framework
- * parts of Matt Woodfield's [HelpLess](https://github.com/m6tt/HelpLess)
- * [Modernizr](https://github.com/Modernizr/Modernizr "")
- * Jan Kovařík's [Glyphicons FREE](http://glyphicons.com/)
+ * [Modernizr](http://modernizr.com)
+ * Jan Kovařík's [Glyphicons FREE](http://glyphicons.com)
 
 
 ### License
@@ -53,6 +52,5 @@
  **Dependencies:**
 
  * All parts of Skeleton are free to use and abuse under the open-source MIT license.
- * HelpLess is released under the MIT license.
  * Modernizr is released under the MIT license.
  * Glyphicons FREE are released under the [Creative Commons Attribution 3.0 Unported (CC BY 3.0)](http://creativecommons.org/licenses/by/3.0/deed.en)
