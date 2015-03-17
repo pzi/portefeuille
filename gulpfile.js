@@ -11,12 +11,15 @@ var gulp        = require('gulp'),
   include       = require('gulp-include'),
   grunt         = require('gulp-grunt'),
   jade          = require('gulp-jade'),
+  data          = require('gulp-data'),
   modernizr     = require('gulp-modernizr'),
   newer         = require('gulp-newer'),
   plumber       = require('gulp-plumber'),
   svgmin        = require('gulp-imagemin'),
   uglify        = require('gulp-uglify'),
   autoprefixer  = require('gulp-autoprefixer'),
+  path          = require('path'),
+  fs            = require('fs'),
 
   // gulp_args = argument parser
   gulp_args = require('minimist')(process.argv.slice(2)),
@@ -36,6 +39,7 @@ var stylesheets = 'src/stylesheets',
 paths = {
   pages: 'src/*.jade',
   jade: 'src/**/*.jade',
+  json: 'data/*.json',
   styles: stylesheets,
   stylesheet:  stylesheets + '/style.{scss,sass}',
   stylesheets: stylesheets + '/**/*.{scss,sass}',
@@ -51,6 +55,9 @@ gulp.task('pages', function () {
   var stream = gulp
     .src(paths.pages)
     .pipe(plumber())
+    .pipe(data(function(file) {
+      return JSON.parse(fs.readFileSync('./data/' + path.basename(file.path) + '.json'));
+    }))
     .pipe(gulpif(development, jade({ pretty: true }), jade()))
     .pipe(gulp.dest('public'))
     .pipe(gulpif(development, connect.reload()));
@@ -141,6 +148,7 @@ gulp.task('deploy', ['grunt-gh-pages']);
 
 gulp.task('watch', function () {
   gulp.watch(paths.jade, ['pages']);
+  gulp.watch(paths.json, ['pages']);
   gulp.watch(paths.stylesheets, ['styles']);
   gulp.watch(paths.javascripts, ['scripts']);
   gulp.watch(paths.images, ['images']);

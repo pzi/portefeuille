@@ -39,27 +39,17 @@ section#about.clearfix
     div.one-third.column
       h3 Tools
       ul.column.alpha.omega.locs
-        li: a(href="http://www.apple.com/mac/", rel="external") Macbook
-        li: a(href="http://www.apple.com/iphone/", rel="external") iPhone
-        li: a(href="http://google.com/chrome/", rel="external") Chrome
-        li: a(href="http://airmailapp.com/", rel="external") Airmail
-        li: a(href="http://culturedcode.com/things/", rel="external") Things
-        li: a(href="https://www.dropbox.com/", rel="external") Dropbox
-        li: a(href="http://panic.com/transmit/", rel="external") Transmit
-        li: a(href="http://www.balsamiq.com/", rel="external") Balsamiq
-        li: a(href="http://www.sublimetext.com/", rel="external") Sublime Text
-        li: a(href="https://imageoptim.com/", rel="external") ImageOptim
+        - var i = 0
+        each url, name in tools
+          unless i % 2
+            li: a(href=url, rel="external")= name
+          - i++
       ul.column.alpha.omega.tools
-        li: a(href="https://brew.sh/", rel="external") Homebrew
-        li: a(href="http://bower.io/", rel="external") Bower
-        li: a(href="http://gruntjs.com/", rel="external") Grunt
-        li: a(href="http://gulpjs.com/", rel="external") Gulp.js
-        li: a(href="http://sass-lang.com/", rel="external") Sass
-        li: a(href="http://haml.info/", rel="external") Haml
-        li: a(href="http://jade-lang.com/", rel="external") Jade
-        li: a(href="https://middlemanapp.com", rel="external") Middleman
-        li: a(href="https://github.com/pzi") GitHub
-        li: a(href="http://stackoverflow.com/users/1166161/pezzi") Stack Overflow
+        - var i = 0
+        each url, name in tools
+          if i % 2
+            li: a(href=url, rel="external")= name
+          - i++
 
     div.sixteen.columns
       p.remove-bottom.

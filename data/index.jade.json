@@ -1,0 +1,40 @@
+{
+  "clients": {
+    "Aldi": "http://www.aldi.com",
+    "Ausdrill": "http://www.ausdrill.com.au",
+    "Kuoni": "http://www.kuoni.com",
+    "Moevenpick Hotels & Resorts": "http://www.moevenpick-hotels.com",
+    "Perth Radiological Clinic": "http://www.perthradclinic.com.au",
+    "Spar": "http://www.spar-int.com",
+    "Swiss International Air Lines Ltd.": "http://www.swiss.com",
+    "Swiss Post": "http://www.swisspost.com",
+    "Swiss Tourism": "http://www.myswitzerland.com",
+    "Take5 Safety Solutions": "https://www.linkedin.com/company/take5-safety-solutions",
+    "Tiinkk": "http://www.tiinkk.com"
+  },
+  "tools": {
+    "Airmail": "http://airmailapp.com/",
+    "Balsamiq": "http://www.balsamiq.com/",
+    "Bower": "http://bower.io/",
+    "Chrome": "http://google.com/chrome/",
+    "Dropbox": "https://www.dropbox.com/",
+    "GitHub": "https://github.com/pzi",
+    "Grunt": "http://gruntjs.com/",
+    "Gulp.js": "http://gulpjs.com/",
+    "Haml": "http://haml.info/",
+    "Homebrew": "https://brew.sh/",
+    "ImageOptim": "https://imageoptim.com/",
+    "iPhone": "http://www.apple.com/iphone/",
+    "Jade": "http://jade-lang.com/",
+    "Macbook": "http://www.apple.com/mac/",
+    "Middleman": "https://middlemanapp.com",
+    "Sass": "http://sass-lang.com/",
+    "Stack Overflow": "http://stackoverflow.com/users/1166161/pezzi",
+    "Sublime Text": "http://www.sublimetext.com/",
+    "Things": "http://culturedcode.com/things/",
+    "Transmit": "http://panic.com/transmit/"
+  }
+}
+
+
+
