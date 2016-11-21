@@ -4,6 +4,7 @@
   "description": "Portfolio of Patrik Affentranger",
   "private": true,
   "scripts": {
+    "gulp": "gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Patrik Affentranger",
