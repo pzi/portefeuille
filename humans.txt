@@ -8,12 +8,12 @@
 
 	Stefan Schärmeli
 
-	Media Queries by: Skeleton.css
+	Grid & media queries by: Skeleton.css
 	Icons: Glyphicons FREE and TWG Retina Icons
 
 
 /* SITE */
-	Last update: 18/03/2015
+	Last update: 30/11/2016
 	Language: English
 	Doctype: HTML5
 	IDE: Sublime Text 3
