@@ -1,5 +1,5 @@
 /*jslint node:true*/
-"use strict";
+'use strict';
 
 // require all the plugins used --------------------------------------------------------------------
 var gulp        = require('gulp'),
@@ -30,13 +30,11 @@ var gulp        = require('gulp'),
 
 
 // all the paths------------------------------------------------------------------------------------
-
 var stylesheets = 'src/stylesheets',
   javascripts   = 'src/javascripts',
   fonts         = 'src/fonts',
   cssImageSrc   = 'img',
   images        = 'public/' + cssImageSrc;
-
 
 paths = {
   pages:        'src/*.jade',
@@ -61,7 +59,7 @@ gulp.task('pages', function () {
     .pipe(data(function(file) {
       return JSON.parse(fs.readFileSync('./data/' + path.basename(file.path) + '.json'));
     }))
-    .pipe(gulpif(development, jade({ pretty: true }), jade()))
+    .pipe(gulpif(development, jade({pretty: true}), jade()))
     .pipe(gulp.dest('public'))
     .pipe(gulpif(development, connect.reload()));
   return stream;
@@ -103,18 +101,18 @@ gulp.task('modernizr', function () {
   var stream = gulp
     .src('public/**/*.{js,css}')
     .pipe(modernizr({
-      "cache": true,
-      "dest": "public/js/modernizr.js",
-      "uglify": true,
-      "options": [
-        "setClasses",
-        "addTest",
-        "testProp",
-        "fnBind"
+      'cache': true,
+      'dest': 'public/js/modernizr.js',
+      'uglify': true,
+      'options': [
+        'setClasses',
+        'addTest',
+        'testProp',
+        'fnBind'
       ],
     }))
     .pipe(uglify())
-    .pipe(gulp.dest("public/js"));
+    .pipe(gulp.dest('public/js'));
   return stream;
 });
 
@@ -174,8 +172,6 @@ gulp.task('connect', function () {
   });
 });
 
-gulp.task('deploy', ['grunt-gh-pages']);
-
 gulp.task('watch', function () {
   gulp.watch(paths.jade, ['pages']);
   gulp.watch(paths.json, ['pages']);
@@ -184,6 +180,8 @@ gulp.task('watch', function () {
   gulp.watch(paths.images, ['images']);
   gulp.watch(paths.svg, ['svg']);
 });
+
+gulp.task('deploy', ['grunt-gh-pages']);
 
 
 // define grouped tasks ----------------------------------------------------------------------------

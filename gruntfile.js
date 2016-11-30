@@ -1,5 +1,5 @@
 /*jshint node:true*/
-"use strict";
+'use strict';
 
 module.exports = function (grunt) {
 
@@ -8,7 +8,7 @@ module.exports = function (grunt) {
       public: {
         options: {
           base: 'public',
-          message: 'Auto-generated commit using grunt-gh-pages'
+          message: 'Auto-generated commit'
         },
         src: '**/*'
       }
