@@ -79,7 +79,7 @@ gulp.task('styles', function () {
       outputStyle: development ? 'expanded' : 'compressed'
     }))
     .pipe(autoprefixer({
-      browsers: ['last 2 versions'],
+      browsers: ['> 1%', 'last 2 versions', 'IE > 9'],
       cascade: false
     }))
     .pipe(gulp.dest('public'))
