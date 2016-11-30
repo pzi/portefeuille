@@ -1,32 +1,20 @@
-.locs, .tools
-  width: 50%
-
-  li a
-    text-decoration: none
-    text-transform: uppercase
-
-#about
-  @extend %noise-bg
-  background-color:rgba(150, 150, 150, .1)
-  // coloured: background-color:rgba(223, 236, 219, .4)
-  margin-top: -7px
-
 .stats
   li
     border-radius: 0 6px 6px 0
     color: #fff
-    font-family: $heading-font-family
-    font-size: 0.933em
-    line-height: 30px
+    font-family: 'open_sansregular', sans-serif
+    font-size: 0.875em
+    line-height: 1.43
     text-transform: uppercase
     position: relative
     margin-bottom: 7px
-    padding-left: 10px
+    padding: 5px 0 5px 10px
     z-index: 10
 
     &.nine
       background-color: $foreground-color + #111
       width: 90%
+
       span
         color: #444
         display: none
@@ -42,8 +30,10 @@
         top: -51px
         width: 160px
         z-index: 0
+
       &:hover span
         display: block
+
         &:after
           background: transparent image-url("icons.png") no-repeat -120px 0
           content: ""
@@ -68,33 +58,6 @@
     &.five
       background-color: #a3c1bf /*background-color: $foreground-color + #111 * 9*/
       width: 50%
-
-.scale
-  position: relative
-
-  .ruler
-    border-bottom: 1px solid $foreground-color
-    border-right: 1px solid $foreground-color
-
-    div
-      border-left: 1px solid $foreground-color
-      float: left
-      height: 9px
-      width: 24%!important
-
-    .sml
-      height: 6px
-      margin-top: 3px
-
-    .last
-      width: 24%
-
-  span.l
-    float: left
-
-  span.r
-    float: right
-
 
 @media only screen and (max-width: 959px)
   #stats li
