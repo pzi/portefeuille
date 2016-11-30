@@ -33,21 +33,23 @@ var gulp        = require('gulp'),
 
 var stylesheets = 'src/stylesheets',
   javascripts   = 'src/javascripts',
+  fonts         = 'src/fonts',
   cssImageSrc   = 'img',
   images        = 'public/' + cssImageSrc;
 
 
 paths = {
-  pages: 'src/*.jade',
-  jade: 'src/**/*.jade',
-  json: 'data/*.json',
-  styles: stylesheets,
-  stylesheet:  stylesheets + '/style.{scss,sass}',
-  stylesheets: stylesheets + '/**/*.{scss,sass}',
-  javascript:  javascripts + '/scripts.coffee',
-  javascripts: javascripts + '/**/*.{coffee,js}',
-  images: 'src/images/**/*.{png,jpg,gif,jpeg}',
-  svg: 'src/images/**/*.svg'
+  pages:        'src/*.jade',
+  jade:         'src/**/*.jade',
+  json:         'data/*.json',
+  styles:       stylesheets,
+  stylesheet:   stylesheets + '/style.{scss,sass}',
+  stylesheets:  stylesheets + '/**/*.{scss,sass}',
+  javascript:   javascripts + '/scripts.coffee',
+  javascripts:  javascripts + '/**/*.{coffee,js}',
+  fonts:        fonts + '/**/*.{eot,svg,ttf,woff}',
+  images:       'src/images/**/*.{png,jpg,gif,jpeg}',
+  svg:          'src/images/**/*.svg'
 };
 
 
@@ -160,6 +162,9 @@ gulp.task('copy', ['sitemap'], function () {
 
   gulp.src('src/google*.html')
     .pipe(gulp.dest('public'));
+
+  gulp.src(paths.fonts)
+    .pipe(gulp.dest('public/fonts'));
 });
 
 gulp.task('connect', function () {
