@@ -1,9 +1,9 @@
-include ./layouts/_mixins.jade
+include ./partials/_mixins.jade
 
 doctype
 html(lang='en', class='no-js')
   head
-    include ./layouts/_head.jade
+    include ./partials/_head.jade
 
   body#top
     <!--[if lte IE 8]>
@@ -14,16 +14,16 @@ html(lang='en', class='no-js')
     <![endif]-->
 
     header(role='banner')
-      include ./layouts/_header.jade
+      include ./partials/_header.jade
 
     main#main(role='main')
       //- 'THIS GUY' SECTION
-      include ./layouts/_about.jade
+      include ./partials/_about.jade
 
       //- 'PORTFOLIO' SECTION
-      include ./layouts/_portfolio.jade
+      include ./partials/_portfolio.jade
 
       //- 'CONTACT' SECTION
-      include ./layouts/_contact.jade
+      include ./partials/_contact.jade
 
-    include ./layouts/_footer.jade
+    include ./partials/_footer.jade
