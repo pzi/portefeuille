@@ -19,6 +19,19 @@
  To make *portefeuille* work seamlessly you will need [Node.js](https://nodejs.org) and [Gulp.js](http://gulpjs.com) installed.
 
 
+### Usage
+
+```
+git clone git@github.com:pzi/portefeuille.git
+cd portefeuille
+npm install
+bower install
+npm run gulp
+```
+
+**Note:** You can use `npm run gulp --dev` to disable asset minification.
+
+
 ### Collaboration
 
  Please feel free to fork and use *portefeuille*. If there is a problem, please open up an issue or send me a pull request.
