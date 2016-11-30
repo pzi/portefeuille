@@ -32,6 +32,11 @@ npm run gulp
 **Note:** You can use `npm run gulp --dev` to disable asset minification.
 
 
+#### Deploy to `gh-pages`
+
+`npm run gulp build && npm run gulp deploy`
+
+
 ### Collaboration
 
  Please feel free to fork and use *portefeuille*. If there is a problem, please open up an issue or send me a pull request.
