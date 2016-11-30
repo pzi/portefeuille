@@ -1,25 +1,22 @@
 .scale
-  position: relative
+  margin-bottom: 20px
 
-  .ruler
-    border-bottom: 1px solid $foreground-color
-    border-right: 1px solid $foreground-color
-
-    div
-      border-left: 1px solid $foreground-color
-      float: left
-      height: 9px
-      width: 24%!important
-
-    .sml
-      height: 6px
-      margin-top: 3px
-
-    .last
-      width: 24%
-
-  span.l
+  > span
     float: left
 
-  span.r
-    float: right
+    &:last-child
+      float: right
+
+.ruler
+  border-bottom: 1px solid $foreground-color
+  border-right: 1px solid $foreground-color
+
+  span
+    border-left: 1px solid $foreground-color
+    float: left
+    height: 9px
+    width: calc(25% - 1px) !important
+
+    &:nth-child(2n)
+      transform-origin: left bottom
+      transform: scale(0.75)
