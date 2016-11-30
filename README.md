@@ -25,7 +25,7 @@
 git clone git@github.com:pzi/portefeuille.git
 cd portefeuille
 npm install
-bower install
+npm run bower install
 npm run gulp
 ```
 
