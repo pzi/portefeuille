@@ -2,9 +2,13 @@
   "clients": {
     "Aldi": "http://www.aldi.com",
     "Ausdrill": "http://www.ausdrill.com.au",
+    "Chamber of Commerce and Industry": "http://www.cciwa.com",
+    "Curtin University": "http://www.curtin.edu.au/",
+    "Fremantle Press": "http://www.fremantlepress.com.au/",
     "Kuoni": "http://www.kuoni.com",
     "Moevenpick Hotels & Resorts": "http://www.moevenpick-hotels.com",
     "Perth Radiological Clinic": "http://www.perthradclinic.com.au",
+    "PetRescue": "http://www.petrescue.com.au",
     "Spar": "http://www.spar-int.com",
     "Swiss International Air Lines Ltd.": "http://www.swiss.com",
     "Swiss Post": "http://www.swisspost.com",
