@@ -30,5 +30,71 @@
     "Sass": "http://sass-lang.com/",
     "Stack Overflow": "http://stackoverflow.com/users/1166161/pezzi",
     "Sublime Text": "http://www.sublimetext.com/"
-  }
+  },
+  "projects": [
+    {
+      "title": "Geidi",
+      "year": "2011",
+      "description": "Web Design, HTML, CSS, Graphic Design, JavaScript, Concept, Sitefinity",
+      "url": "http://www.geidi.com",
+      "urlTitle": "geidi.com",
+      "imgSrc": "www.geidi.com.jpg"
+    },
+    {
+      "title": "n c ag",
+      "year": "2011",
+      "description": "Web Design, HTML, CSS, Graphic Design of V1, JavaScript, Concept, PHP",
+      "url": "http://www.ncag.ch",
+      "urlTitle": "ncag.ch",
+      "imgSrc": "www.ncag.ch.jpg"
+    },
+    {
+      "title": "Media Impression",
+      "year": "2010",
+      "description": "HTML, CSS, JavaScript, PHP",
+      "url": "http://www.mediaimpression.ch",
+      "urlTitle": "mediaimpression.ch",
+      "imgSrc": "www.mediaimpression.ch.jpg"
+    },
+    {
+      "title": "Workfinder",
+      "year": "2011",
+      "description": "Web Design, HTML, CSS, Graphic Design, JavaScript, Concept, PHP",
+      "url": "http://www.workfinder.ch",
+      "urlTitle": "workfinder.ch",
+      "imgSrc": "www.workfinder.ch.jpg"
+    },
+    {
+      "title": "Mohnhaus",
+      "year": "2010",
+      "description": "Web Design, HTML, CSS, PHP, JavaScript, Graphic Design, Concept",
+      "url": "http://www.mohnhaus.ch",
+      "urlTitle": "mohnhaus.ch",
+      "imgSrc": "www.mohnhaus.ch.jpg"
+    },
+    {
+      "title": "Balkonien Wohnen",
+      "year": "2010",
+      "description": "HTML, CSS, JavaScript, PHP",
+      "url": "http://www.balkonien-wohnen.ch",
+      "urlTitle": "balkonien-wohnen.ch",
+      "imgSrc": "www.balkonien-wohnen.ch.jpg"
+    },
+    {
+      "title": "Fondation Robmar",
+      "year": "2010",
+      "description": "Web Design, HTML, CSS, PHP, JavaScript, Graphic Design, Concept",
+      "url": "http://www.fondation-robmar.ch",
+      "urlTitle": "fondation-robmar.ch",
+      "imgSrc": "www.fondation-robmar.ch.jpg"
+    },
+    {
+      "title": "Advantis",
+      "year": "2010",
+      "description": "Web Design, HTML, CSS, PHP, JavaScript, Concept",
+      "url": "http://www.advantis-ic.com",
+      "urlTitle": "advantis-ic.com",
+      "imgSrc": "www.advantis-ic.com.jpg"
+    }
+  ]
 }

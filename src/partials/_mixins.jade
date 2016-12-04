@@ -1,8 +1,9 @@
-mixin project_odd(title, year, desc, url, urltitle, imgsrc)
-  div.eight.columns.project.left-col
-    div.four.columns.alpha.push-by-four.img
-      a(href="#{url}", rel="nofollow"): img(src="#{imgsrc}", alt="Screenshot of #{urltitle}")
-    div.four.columns.omega.pull-by-four
+mixin project(index, title, year, desc, url, urltitle, imgsrc)
+  - var even = index % 2 === 0
+  div.eight.columns.project(class = even ? 'left-col' : 'right-col')
+    div.four.columns.alpha.img(class = even ? 'push-by-four' : '')
+      a(href="#{url}", rel="nofollow"): img(src="img/projects/#{imgsrc}", alt="Screenshot of #{urltitle}")
+    div.four.columns.omega(class = even ? 'pull-by-four' : '')
       .desc
         h3 #{title}
         p
@@ -11,19 +12,7 @@ mixin project_odd(title, year, desc, url, urltitle, imgsrc)
           | #{desc}
           br
           br
-          a(href="#{url}", rel="nofollow") &raquo; #{urltitle}
-
-mixin project_even(title, year, desc, url, urltitle, imgsrc)
-  div.eight.columns.project.right-col
-    div.four.columns.alpha.img
-      a(href="#{url}", rel="nofollow"): img(src="#{imgsrc}", alt="Screenshot of #{urltitle}")
-    div.four.columns.omega
-      .desc
-        h3 #{title}
-        p
-          span.yr #{year}
-          br
-          | #{desc}
-          br
-          br
-          a(href="#{url}", rel="nofollow") &raquo; #{urltitle}
+          if urltitle != "Unreleased"
+            a(href="#{url}", rel="nofollow") &raquo; #{urltitle}
+          else
+            | (#{urltitle})
